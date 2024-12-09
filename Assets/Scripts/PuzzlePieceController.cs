@@ -64,7 +64,7 @@ public class PuzzlePieceController : MonoBehaviour
         {
             gameObject.transform.position = targetPlace.transform.position;
             AddScore();
-            Destroy(collision.gameObject.GetComponent<Collider2D>());
+            //Destroy(collision.gameObject.GetComponent<Collider2D>());
             isDragging = false;
         }
     }
