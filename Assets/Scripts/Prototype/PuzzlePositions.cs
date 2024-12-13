@@ -8,11 +8,6 @@ public class PuzzlePositions : MonoBehaviour
     public PuzzleManager puzzleManager;
     public GameObject assignedObject;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (assignedObject != null)
@@ -21,17 +16,21 @@ public class PuzzlePositions : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Piece") && assignedObject == null)
+        if (collision.gameObject.CompareTag("Piece"))
         {
-            // Check if it's a possible object
-            for (int i = 0; i < puzzleManager.possibleObjects.Length; i++)
+            // Allow reassignment only if the piece is not already assigned to this position
+            if (assignedObject == null)
             {
-                if (other.gameObject == puzzleManager.possibleObjects[i])
+                // Check if it's a possible object
+                for (int i = 0; i < puzzleManager.possibleObjects.Length; i++)
                 {
-                    assignedObject = other.gameObject;
-                    DragAndDrop.isDragging = false;
+                    if (collision.gameObject == puzzleManager.possibleObjects[i])
+                    {
+                        assignedObject = collision.gameObject;
+                        //DragAndDrop.isDragging = false;
+                    }
                 }
             }
         }

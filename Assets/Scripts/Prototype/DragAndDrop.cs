@@ -5,7 +5,8 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     private Vector2 mousePosition;
-    public static bool isDragging;
+    private bool isDragging;
+    public PuzzleManager puzzleManager;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class DragAndDrop : MonoBehaviour
 
     void Update()
     {
-        if (isDragging == true)
+        if (isDragging)
         {
             mousePosition = Input.mousePosition;
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -26,9 +27,10 @@ public class DragAndDrop : MonoBehaviour
     {
         if (gameObject.tag == "Piece")
         {
+            isDragging = true;
+
             mousePosition = Input.mousePosition;
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            isDragging = true;
         }
     }
 
