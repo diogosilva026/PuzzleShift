@@ -8,10 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Puzzle.unity
-    guid: 1d13888f47346ce46955bea3a74f1388
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Win.unity
     guid: d28e3b86058c2be4f901c0fa2f331a0f
+  - enabled: 1
+    path: Assets/Scenes/EasyLevels/Easy1.unity
+    guid: d0b5d4ba436f78848807861d6224906d
+  - enabled: 1
+    path: Assets/Scenes/EasyLevels/Easy2.unity
+    guid: 1c274787cc680f34392515b685a3ed7a
+  - enabled: 1
+    path: Assets/Scenes/EasyLevels/Easy3.unity
+    guid: 9b0eb70cf80d5154a83326022332d1f6
+  - enabled: 1
+    path: Assets/Scenes/MediumLevels/Medium1.unity
+    guid: c98a09e87b9990845865f553fa0fdb3e
+  - enabled: 1
+    path: Assets/Scenes/MediumLevels/Medium2.unity
+    guid: 490d87232b4f1684ea3cb806ef94e6b0
+  - enabled: 1
+    path: Assets/Scenes/MediumLevels/Medium3.unity
+    guid: 0b968a8406e103e4489876cbf67f0132
+  - enabled: 1
+    path: Assets/Scenes/HardLevels/Hard1.unity
+    guid: 34d5f714fd2dbe342801b66c43944905
+  - enabled: 1
+    path: Assets/Scenes/HardLevels/Hard2.unity
+    guid: 51380fdaf50ea214c9e005189719519f
+  - enabled: 1
+    path: Assets/Scenes/HardLevels/Hard3.unity
+    guid: 4b3bf97e288f9b4438d7eb52b002d4bc
   m_configObjects: {}
