@@ -742,7 +742,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1637799578}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: PlayEasy2
+        m_MethodName: PlayHard2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1637799578}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: PlayEasy2
+        m_MethodName: PlayMedium2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1707,7 +1707,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1637799578}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: PlayEasy3
+        m_MethodName: PlayMedium3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1973,7 +1973,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1637799578}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: PlayEasy1
+        m_MethodName: PlayMedium1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2870,7 +2870,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1637799578}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: PlayEasy1
+        m_MethodName: PlayHard1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3279,7 +3279,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1637799578}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: PlayEasy3
+        m_MethodName: PlayHard3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

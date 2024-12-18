@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d83d42152a511a64a9c5b35741752f2b
+guid: 920e4354ed755e54199604124e0acac4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Esquilo_0
+      name: Squirrel_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af70b52c6fbd252418e136b06e302f2a
-      internalID: -1793418217
+      spriteID: 7d77153bf7e1e004d893ed9789696366
+      internalID: -1700376851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_1
+      name: Squirrel_1
       rect:
         serializedVersion: 2
         x: 861
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6fc25e21d53abf4fac3eb896d55dcdc
-      internalID: -837960643
+      spriteID: c7c286ae616d7ca489b7cbf3bcf2842e
+      internalID: -2117090743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_2
+      name: Squirrel_2
       rect:
         serializedVersion: 2
         x: 1722
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c2f53f9e324a945a1ef8c4d17f4ff4
-      internalID: 1966339658
+      spriteID: 2e635548161c68f43a639f12305e20ef
+      internalID: 1041129807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_3
+      name: Squirrel_3
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad446a09081bd414dbf619f390a0967e
-      internalID: -1840616094
+      spriteID: c8b837c4221c27448a7878ddec8d8c1d
+      internalID: -434569480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_4
+      name: Squirrel_4
       rect:
         serializedVersion: 2
         x: 861
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92485cc94bd6bca4a8f17800f32e0b19
-      internalID: -65072444
+      spriteID: bb89a6f973f39ea44aeaa2983a639ee8
+      internalID: 14462399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_5
+      name: Squirrel_5
       rect:
         serializedVersion: 2
         x: 1722
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a1f7a152b59e29418d7b3516c01593f
-      internalID: -1679359343
+      spriteID: a0d76264e012ffa43b39537387bacfee
+      internalID: 1476109083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_6
+      name: Squirrel_6
       rect:
         serializedVersion: 2
         x: 0
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f9c3cdc9b71d7e41ba592944099ba6c
-      internalID: -775760144
+      spriteID: 0c25361e85bcef8498ff5cf4404db2e1
+      internalID: -528931847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_7
+      name: Squirrel_7
       rect:
         serializedVersion: 2
         x: 861
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fe382bc812e134459b31fdfe0d996c6
-      internalID: 68316306
+      spriteID: 2b498c53a62998f488f1aea6b1eb07e8
+      internalID: 946546771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esquilo_8
+      name: Squirrel_8
       rect:
         serializedVersion: 2
         x: 1722
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 229c06767f6c3884d8d35800585682d7
-      internalID: 1868658961
+      spriteID: 3a3777fa42bd53647a12fee4cd03c788
+      internalID: 340000252
       vertices: []
       indices: 
       edges: []
@@ -322,15 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Esquilo_0: -1793418217
-      Esquilo_1: -837960643
-      Esquilo_2: 1966339658
-      Esquilo_3: -1840616094
-      Esquilo_4: -65072444
-      Esquilo_5: -1679359343
-      Esquilo_6: -775760144
-      Esquilo_7: 68316306
-      Esquilo_8: 1868658961
+      Squirrel_0: -1700376851
+      Squirrel_1: -2117090743
+      Squirrel_2: 1041129807
+      Squirrel_3: -434569480
+      Squirrel_4: 14462399
+      Squirrel_5: 1476109083
+      Squirrel_6: -528931847
+      Squirrel_7: 946546771
+      Squirrel_8: 340000252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
