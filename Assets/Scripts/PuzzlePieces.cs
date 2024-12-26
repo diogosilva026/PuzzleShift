@@ -8,6 +8,8 @@ public class PuzzlePieces : MonoBehaviour
     public GameObject targetPlace; // Correct position for this piece
     public List<GameObject> gameObjectsList; // List of all valid targets
 
+    public GameObject winScreen;
+
     private Vector2 mousePosition;
     private bool isDragging = false;
     private bool isPlacedCorrectly = false; // Tracks if this piece is placed correctly
@@ -86,8 +88,7 @@ public class PuzzlePieces : MonoBehaviour
     {
         if (placedPieces == totalPieces)
         {
-            Debug.Log("All pieces placed correctly!");
-            SceneManager.LoadScene("Win"); // Load win scene
+            winScreen.SetActive(true);
         }
     }
 }
