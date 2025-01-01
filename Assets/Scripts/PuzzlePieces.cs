@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PuzzlePieces : MonoBehaviour
+public class PuzzlePieceController : MonoBehaviour
 {
     public GameObject targetPlace; // Correct position for this piece
     public List<GameObject> gameObjectsList; // List of all valid targets
-
     public GameObject winScreen;
 
     private Vector2 mousePosition;
@@ -20,13 +19,12 @@ public class PuzzlePieces : MonoBehaviour
     private static HashSet<GameObject> occupiedPositions = new HashSet<GameObject>(); // Tracks occupied positions
 
     private GameObject currentSnappedPosition = null; // Tracks the current position where this piece is snapped
+    private GameObject pendingSnapPosition = null; // Tracks the position to snap to on mouse release
 
     void Start()
     {
         if (totalPieces == 0) // Initialize total pieces once
-        {
             totalPieces = gameObjectsList.Count;
-        }
     }
 
     void Update()
@@ -44,11 +42,11 @@ public class PuzzlePieces : MonoBehaviour
         mousePosition = Input.mousePosition;
         isDragging = true;
 
+        // Free up the position when picking up the piece
         if (currentSnappedPosition != null)
         {
             occupiedPositions.Remove(currentSnappedPosition);
             currentSnappedPosition = null;
-
             if (isPlacedCorrectly)
             {
                 isPlacedCorrectly = false;
@@ -60,27 +58,40 @@ public class PuzzlePieces : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
+
+        if (pendingSnapPosition != null && !occupiedPositions.Contains(pendingSnapPosition))
+        {
+            // Snap to the position if it's valid and not occupied
+            transform.position = pendingSnapPosition.transform.position;
+            currentSnappedPosition = pendingSnapPosition;
+            occupiedPositions.Add(pendingSnapPosition);
+
+            if (pendingSnapPosition == targetPlace)
+            {
+                isPlacedCorrectly = true;
+                placedPieces++;
+                CheckWinCondition();
+            }
+        }
+
+        pendingSnapPosition = null; // Clear pending snap
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObjectsList.Contains(collision.gameObject) && !occupiedPositions.Contains(collision.gameObject))
         {
-            // Snap to the position if it's not occupied
-            transform.position = collision.gameObject.transform.position;
-            isDragging = false;
+            // Set the pending snap position
+            pendingSnapPosition = collision.gameObject;
+        }
+    }
 
-            // Mark the position as occupied
-            currentSnappedPosition = collision.gameObject;
-            occupiedPositions.Add(collision.gameObject);
-
-            // Check if it's the correct target place
-            if (collision.gameObject == targetPlace)
-            {
-                isPlacedCorrectly = true;
-                placedPieces++;
-                CheckWinCondition();
-            }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (pendingSnapPosition == collision.gameObject)
+        {
+            // Clear pending snap if the mouse leaves the collider
+            pendingSnapPosition = null;
         }
     }
 
