@@ -3,8 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
+    // This script has the purpose to change between scenes
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    #region EASY LEVELS
+
     public void PlayEasy1()
     {
         SceneManager.LoadScene("Easy1");
@@ -17,6 +29,11 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene("Easy3");
     }
+
+    #endregion
+
+    #region MEDIUM LEVELS
+
     public void PlayMedium1()
     {
         SceneManager.LoadScene("Medium1");
@@ -29,6 +46,11 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene("Medium3");
     }
+
+    #endregion
+
+    #region HARD LEVELS
+
     public void PlayHard1()
     {
         SceneManager.LoadScene("Hard1");
@@ -42,9 +64,5 @@ public class NewBehaviourScript : MonoBehaviour
         SceneManager.LoadScene("Hard3");
     }
 
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+    #endregion
 }

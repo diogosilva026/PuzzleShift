@@ -5,30 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class PuzzlePieceController : MonoBehaviour
 {
-    public GameObject targetPlace; // Correct position for this piece
+    public GameObject targetPlace; // Correct position for this puzzle piece
     public List<GameObject> gameObjectsList; // List of all valid targets
-    public GameObject winScreen;
+    public GameObject winScreen; // WinScreen Canvas
 
     private Vector2 mousePosition;
     private bool isDragging = false;
-    private bool isPlacedCorrectly = false; // Tracks if this piece is placed correctly
+    private bool isPlacedCorrectly = false; // Tracks if this puzzle piece is placed correctly
 
-    private static int placedPieces = 0; // Tracks how many pieces are placed correctly
+    private static int placedPieces = 0; // Tracks how many puzzle pieces are placed correctly
     private static int totalPieces; // Total number of puzzle pieces
 
     private static HashSet<GameObject> occupiedPositions = new HashSet<GameObject>(); // Tracks occupied positions
 
-    private GameObject currentSnappedPosition = null; // Tracks the current position where this piece is snapped
+    private GameObject currentSnappedPosition = null; // Tracks the current position where this puzzle piece is snapped
     private GameObject pendingSnapPosition = null; // Tracks the position to snap to on mouse release
+
+    private bool gameCompleted = false; // Tracks if the win condition is completed
 
     void Start()
     {
-        if (totalPieces == 0) // Initialize total pieces once
-            totalPieces = gameObjectsList.Count;
+        // Reset static variables for a new scene
+        placedPieces = 0;
+        totalPieces = gameObjectsList.Count;
+        occupiedPositions.Clear();
     }
 
     void Update()
     {
+        if (gameCompleted) return; // Prevent updates if the win condition is completed
+
         if (isDragging)
         {
             mousePosition = Input.mousePosition;
@@ -39,10 +45,12 @@ public class PuzzlePieceController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (gameCompleted) return; // Prevent interaction if the win condition is completed
+
         mousePosition = Input.mousePosition;
         isDragging = true;
 
-        // Free up the position when picking up the piece
+        // Free up the position when picking up the puzzle piece
         if (currentSnappedPosition != null)
         {
             occupiedPositions.Remove(currentSnappedPosition);
@@ -57,6 +65,8 @@ public class PuzzlePieceController : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (gameCompleted) return; // Prevent interaction if the win condition is completed
+
         isDragging = false;
 
         if (pendingSnapPosition != null && !occupiedPositions.Contains(pendingSnapPosition))
@@ -79,6 +89,8 @@ public class PuzzlePieceController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (gameCompleted) return; // Prevent interaction if the win condition is completed
+
         if (gameObjectsList.Contains(collision.gameObject) && !occupiedPositions.Contains(collision.gameObject))
         {
             // Set the pending snap position
@@ -100,6 +112,7 @@ public class PuzzlePieceController : MonoBehaviour
         if (placedPieces == totalPieces)
         {
             winScreen.SetActive(true);
+            gameCompleted = true; // Prevent further interaction
         }
     }
 }
