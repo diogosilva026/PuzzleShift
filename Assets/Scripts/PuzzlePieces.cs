@@ -8,6 +8,7 @@ public class PuzzlePieceController : MonoBehaviour
     public GameObject targetPlace; // Correct position for this puzzle piece
     public List<GameObject> gameObjectsList; // List of all valid targets
     public GameObject winScreen; // WinScreen Canvas
+    private AudioManager audioManager; // Reference to AudioManager
 
     private Vector2 mousePosition;
     private bool isDragging = false;
@@ -25,6 +26,8 @@ public class PuzzlePieceController : MonoBehaviour
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         // Reset static variables for a new scene
         placedPieces = 0;
         totalPieces = gameObjectsList.Count;
@@ -113,6 +116,10 @@ public class PuzzlePieceController : MonoBehaviour
         {
             winScreen.SetActive(true);
             gameCompleted = true; // Prevent further interaction
-        }
+            if (audioManager != null)
+            {
+                audioManager.PlayApplause(); // Play the applause sound
+            }
+        } 
     }
 }
