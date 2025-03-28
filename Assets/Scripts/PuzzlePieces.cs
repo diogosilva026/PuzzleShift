@@ -115,11 +115,13 @@ public class PuzzlePieceController : MonoBehaviour
         if (placedPieces == totalPieces)
         {
             winScreen.SetActive(true);
-            gameCompleted = true; // Prevent further interaction
-            if (audioManager != null)
+            gameCompleted = true; // Impede mais interações
+
+            // Toca o som de aplausos, se o AudioManager estiver disponível
+            if (audioManager != null && audioManager.applauseSFX != null)
             {
-                audioManager.PlayApplause(); // Play the applause sound
+                audioManager.PlaySFX(audioManager.applauseSFX);
             }
-        } 
+        }
     }
 }
