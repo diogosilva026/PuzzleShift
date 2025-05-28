@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.superkerokero.bookmark4unity": "https://github.com/superkerokero/Bookmark4Unity.git?path=/Assets/Bookmark4Unity",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.feature.2d": "2.0.0",
     "com.unity.ide.rider": "3.0.24",
