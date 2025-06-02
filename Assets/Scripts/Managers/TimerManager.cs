@@ -56,6 +56,12 @@ public class TimerManager : MonoBehaviour
     public void EndTimer()
     {
         timeIsRunning = false;
-        GameManager.Instance.SaveLevelTime(currentLevel, timer);
+        
+        bool isNewBest = GameManager.Instance.SaveLevelTime(currentLevel, timer);
+
+        if (isNewBest)
+        {
+            // Trigger UI feedback
+        }
     }
 }

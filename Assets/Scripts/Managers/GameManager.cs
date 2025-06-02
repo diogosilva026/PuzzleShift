@@ -59,19 +59,22 @@ namespace AYellowpaper.SerializedCollections
 
         #region TIMER STUFF
         // Saves the best time for each level in the dictionary, but only if it is faster than the previous one
-        public void SaveLevelTime(string levelName, float time)
+        public bool SaveLevelTime(string levelName, float time)
         {
             if (bestLevelCompletionTimes.ContainsKey(levelName))
             {
                 if (time < bestLevelCompletionTimes[levelName])
                 {
                     bestLevelCompletionTimes[levelName] = time;
+                    return true; // New best time
                 }
+                return false; // Not a new best time
             }
             else
             {
                 // Adds the level and completed time if it is not already in the dictionary
                 bestLevelCompletionTimes.Add(levelName, time);
+                return true; // First time for this level - considered a new best
             }
         }
 

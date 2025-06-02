@@ -24,11 +24,7 @@ public class SceneController : MonoBehaviour
     public void LoadHard3() => SceneManager.LoadScene("Hard3");
     #endregion
 
-    public void ToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-
-    }
+    public void LoadMainMenu() => SceneManager.LoadScene("MainMenu");
 
     // Closes the game
     public void QuitGame() => Application.Quit();
