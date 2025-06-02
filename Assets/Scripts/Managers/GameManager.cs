@@ -59,7 +59,7 @@ namespace AYellowpaper.SerializedCollections
 
         #region TIMER STUFF
         // Saves the best time for each level in the dictionary, but only if it is faster than the previous one
-        private void SaveLevelTime(string levelName, float time)
+        public void SaveLevelTime(string levelName, float time)
         {
             if (bestLevelCompletionTimes.ContainsKey(levelName))
             {
