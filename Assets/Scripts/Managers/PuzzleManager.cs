@@ -17,6 +17,7 @@ public class PuzzleManager : MonoBehaviour
         SpawnPuzzlePieces();
     }
 
+    // Loads the chosen puzzle/level data, connecting its json file with the PuzzleLevelData class
     private void LoadLevelData()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -44,6 +45,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Vector3 spawnPos = levelData.pieceSpawnPoints[i % levelData.pieceSpawnPoints.Length];
             GameObject pieceObj = Instantiate(puzzlePiecePrefab, spawnPos, Quaternion.identity);
+            pieceObj.transform.localScale = levelData.pieceScale;
             PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
             piece.correctIndex = levelData.pieceCorrectOrder[i];
             spawnedPieces.Add(pieceObj);
@@ -73,6 +75,7 @@ public class PuzzleLevelData
     [Header("Piece Configuration")]
     public int pieceCount;
     public string[] pieceSprites;
+    public Vector3 pieceScale = Vector3.one;
     public Vector3[] pieceSpawnPoints;
     public Vector3[] targetPositions;
     public int[] pieceCorrectOrder;
