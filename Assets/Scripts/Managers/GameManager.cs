@@ -72,8 +72,7 @@ namespace AYellowpaper.SerializedCollections
             }
             else
             {
-                // Adds the level and completed time if it is not already in the dictionary
-                bestLevelCompletionTimes.Add(levelName, time);
+                bestLevelCompletionTimes.Add(levelName, time); // Adds the level and completed time if it is not already in the dictionary
                 return true; // First time for this level - considered a new best
             }
         }
