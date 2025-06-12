@@ -52,7 +52,12 @@ public class PuzzleManager : MonoBehaviour
             Vector3 spawnPos = shuffledSpawnPoints[i];
 
             GameObject pieceObj = Instantiate(puzzlePiecePrefab, spawnPos, Quaternion.identity);
+
             pieceObj.transform.localScale = levelData.pieceScale;
+
+            BoxCollider2D col = pieceObj.GetComponent<BoxCollider2D>();
+            col.size = new Vector2(2 / pieceObj.transform.localScale.x, 2 / pieceObj.transform.localScale.y);
+
             PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
             piece.correctIndex = levelData.pieceCorrectOrder[i];
             spawnedPieces.Add(pieceObj);
@@ -90,6 +95,19 @@ public class PuzzleManager : MonoBehaviour
             int j = Random.Range(0, i + 1);
             (list[i], list[j]) = (list[j], list[i]);
         }
+    }
+
+    public void CheckIfPuzzleIsComplete()
+    {
+        foreach (GameObject pieceObj in spawnedPieces)
+        {
+            PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
+            if (!piece.isPlacedCorrectly)
+                return;
+        }
+
+        Debug.Log("Puzzle Complete!");
+        // Show win UI, play sound, etc.
     }
 }
 
