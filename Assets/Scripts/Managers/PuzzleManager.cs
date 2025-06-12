@@ -9,11 +9,13 @@ public class PuzzleManager : MonoBehaviour
 {
     private PuzzleLevelData levelData;
     [SerializeField] private GameObject puzzlePiecePrefab;
+    [SerializeField] private GameObject targetSquarePrefab;
     [SerializeField] private List<GameObject> spawnedPieces = new();
 
     private void Start()
     {
         LoadLevelData();
+        SpawnTargetSquares();
         SpawnPuzzlePieces();
     }
 
@@ -69,6 +71,17 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    private void SpawnTargetSquares()
+    {
+        for (int i = 0; i < levelData.targetPositions.Length; i++)
+        {
+            GameObject target = Instantiate(targetSquarePrefab, levelData.targetPositions[i], Quaternion.identity);
+            target.transform.localScale = levelData.targetScale;
+            TargetSquare square = target.GetComponent<TargetSquare>();
+            square.index = i;
+        }
+    }
+
     // Shuffle Method for List variables
     private void ShuffleList<T>(List<T> list)
     {
@@ -83,15 +96,14 @@ public class PuzzleManager : MonoBehaviour
 [System.Serializable]
 public class PuzzleLevelData
 {
-    [Header("Scene Configuration")]
-    public string sceneName;
-    public int targetSquareCount;
+    [Header("Target Squares Configuration")]
+    public Vector3 targetScale = Vector3.one;
+    public Vector3[] targetPositions;
 
-    [Header("Piece Configuration")]
+    [Header("Puzzle Pieces Configuration")]
     public int pieceCount;
     public string[] pieceSprites;
     public Vector3 pieceScale = Vector3.one;
     public Vector3[] pieceSpawnPoints;
-    public Vector3[] targetPositions;
     public int[] pieceCorrectOrder;
 }

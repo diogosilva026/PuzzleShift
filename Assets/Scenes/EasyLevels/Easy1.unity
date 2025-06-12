@@ -2293,6 +2293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePiecePrefab: {fileID: 8362562224197796603, guid: b36184d10a02eb94985ec49e51b569e6, type: 3}
+  targetSquarePrefab: {fileID: 29795884693597121, guid: a61f6c19305327a4f8b24e6ddf233aab, type: 3}
   spawnedPieces: []
 --- !u!4 &962005037
 Transform:
