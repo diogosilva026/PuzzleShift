@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5202895736168161706}
   - component: {fileID: 8616541095773341445}
-  - component: {fileID: 8498070221681556637}
   - component: {fileID: 7846313574565601888}
-  - component: {fileID: 6675631545988488507}
-  m_Layer: 0
+  - component: {fileID: 3383927326008227517}
+  m_Layer: 7
   m_Name: PuzzlePiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,18 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctIndex: 0
   isPlacedCorrectly: 0
---- !u!114 &8498070221681556637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362562224197796603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769aa7e49ab4fad4aabf19eb62f22657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &7846313574565601888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113,7 +100,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6675631545988488507
+--- !u!61 &3383927326008227517
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,5 +143,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.225, y: 0.225}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

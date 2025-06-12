@@ -11,12 +11,19 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject puzzlePiecePrefab;
     [SerializeField] private GameObject targetSquarePrefab;
     [SerializeField] private List<GameObject> spawnedPieces = new();
+    private List<TargetSquare> allTargetSquaresList = new();
 
     private void Start()
     {
         LoadLevelData();
         SpawnTargetSquares();
         SpawnPuzzlePieces();
+
+        DragController dragController = FindObjectOfType<DragController>();
+        if (dragController != null )
+        {
+            dragController.validTargets = allTargetSquaresList;
+        }
     }
 
     // Loads the chosen puzzle/level data, connecting its json file with the PuzzleLevelData class
@@ -53,10 +60,12 @@ public class PuzzleManager : MonoBehaviour
 
             GameObject pieceObj = Instantiate(puzzlePiecePrefab, spawnPos, Quaternion.identity);
 
+            pieceObj.layer = LayerMask.NameToLayer("PuzzlePiece");
+
             pieceObj.transform.localScale = levelData.pieceScale;
 
-            BoxCollider2D col = pieceObj.GetComponent<BoxCollider2D>();
-            col.size = new Vector2(2 / pieceObj.transform.localScale.x, 2 / pieceObj.transform.localScale.y);
+            BoxCollider2D pieceCollider = pieceObj.GetComponent<BoxCollider2D>();
+            pieceCollider.size = levelData.pieceColliderSize;
 
             PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
             piece.correctIndex = levelData.pieceCorrectOrder[i];
@@ -81,9 +90,16 @@ public class PuzzleManager : MonoBehaviour
         for (int i = 0; i < levelData.targetPositions.Length; i++)
         {
             GameObject target = Instantiate(targetSquarePrefab, levelData.targetPositions[i], Quaternion.identity);
+
             target.transform.localScale = levelData.targetScale;
+
+            BoxCollider2D targetCollider = target.GetComponent<BoxCollider2D>();
+            targetCollider.size = levelData.targetSquareColliderSize;
+
             TargetSquare square = target.GetComponent<TargetSquare>();
             square.index = i;
+
+            allTargetSquaresList.Add(square);
         }
     }
 
@@ -96,19 +112,6 @@ public class PuzzleManager : MonoBehaviour
             (list[i], list[j]) = (list[j], list[i]);
         }
     }
-
-    public void CheckIfPuzzleIsComplete()
-    {
-        foreach (GameObject pieceObj in spawnedPieces)
-        {
-            PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
-            if (!piece.isPlacedCorrectly)
-                return;
-        }
-
-        Debug.Log("Puzzle Complete!");
-        // Show win UI, play sound, etc.
-    }
 }
 
 [System.Serializable]
@@ -116,12 +119,14 @@ public class PuzzleLevelData
 {
     [Header("Target Squares Configuration")]
     public Vector3 targetScale = Vector3.one;
+    public Vector2 targetSquareColliderSize = Vector2.one;
     public Vector3[] targetPositions;
 
     [Header("Puzzle Pieces Configuration")]
     public int pieceCount;
     public string[] pieceSprites;
     public Vector3 pieceScale = Vector3.one;
+    public Vector2 pieceColliderSize = Vector2.one;
     public Vector3[] pieceSpawnPoints;
     public int[] pieceCorrectOrder;
 }
