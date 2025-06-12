@@ -41,9 +41,14 @@ public class PuzzleManager : MonoBehaviour
             return;
         }
 
+        // Creates a copy of the spawn points and shuffles them
+        List<Vector3> shuffledSpawnPoints = new(levelData.pieceSpawnPoints);
+        ShuffleList(shuffledSpawnPoints);
+
         for (int i = 0; i < levelData.pieceCount; i++)
         {
-            Vector3 spawnPos = levelData.pieceSpawnPoints[i % levelData.pieceSpawnPoints.Length];
+            Vector3 spawnPos = shuffledSpawnPoints[i];
+
             GameObject pieceObj = Instantiate(puzzlePiecePrefab, spawnPos, Quaternion.identity);
             pieceObj.transform.localScale = levelData.pieceScale;
             PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
@@ -61,6 +66,16 @@ public class PuzzleManager : MonoBehaviour
             {
                 Debug.LogError($"Sprite '{spriteName}' not found in Resources/Sprites/");
             }
+        }
+    }
+
+    // Shuffle Method for List variables
+    private void ShuffleList<T>(List<T> list)
+    {
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (list[i], list[j]) = (list[j], list[i]);
         }
     }
 }
