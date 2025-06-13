@@ -1,0 +1,35 @@
+{
+    "pieceCount": 9,
+    "targetPositions": [
+        {"x": -3.0, "y": 2.0, "z": 0.0},
+        {"x": -1.0, "y": 2.0, "z": 0.0},
+        {"x": 1.0, "y": 2.0, "z": 0.0},
+        {"x": -3.0, "y": 0.0, "z": 0.0},
+        {"x": -1.0, "y": 0.0, "z": 0.0},
+        {"x": 1.0, "y": 0.0, "z": 0.0},
+        {"x": -3.0, "y": -2.0, "z": 0.0},
+        {"x": -1.0, "y": -2.0, "z": 0.0},
+        {"x": 1.0, "y": -2.0, "z": 0.0}
+],
+    "pieceSpawnPoints": [
+        {"x": 7.0, "y": 3.0, "z": 0.0},
+        {"x": -6.0, "y": 0.0, "z": 0.0},
+        {"x": 7.0, "y": 0.0, "z": 0.0},
+        {"x": 4.0, "y": -3.0, "z": 0.0},
+        {"x": 4.0, "y": 3.0, "z": 0.0},
+        {"x": -6.0, "y": -3.0, "z": 0.0},
+        {"x": -6.0, "y": 3.0, "z": 0.0},
+        {"x": 7.0, "y": -3.0, "z": 0.0},
+        {"x": 4.0, "y": 0.0, "z": 0.0}
+    ],
+    "pieceSprites": [
+	"Easy2/Terrace_0", "Easy2/Terrace_1", "Easy2/Terrace_2",
+	"Easy2/Terrace_3", "Easy2/Terrace_4", "Easy2/Terrace_5",
+	"Easy2/Terrace_6", "Easy2/Terrace_7", "Easy2/Terrace_8"
+],
+	"pieceColliderSize": {"x": 6.27, "y": 6.27},
+	"targetSquareColliderSize": {"x": 1, "y": 1},
+    "targetScale": {"x": 1.5, "y": 1.5, "z": 1.5},
+    "pieceScale": {"x": 0.305, "y": 0.305, "z": 0.305},
+    "pieceCorrectOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}

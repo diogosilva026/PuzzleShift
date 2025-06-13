@@ -39,6 +39,7 @@ public class DragController : MonoBehaviour
     {
         if (!Input.GetMouseButtonDown(0)) return;
 
+        // Unity sometimes fails to hit 2D colliders unless you filter by layer explicitly
         int puzzleLayerMask = LayerMask.GetMask("PuzzlePiece");
         RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, Mathf.Infinity, puzzleLayerMask);
 
