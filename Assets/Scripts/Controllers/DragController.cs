@@ -71,7 +71,16 @@ public class DragController : MonoBehaviour
     private void BeginDrag(PuzzlePiece piece)
     {
         lastDragged = piece;
-        originalPosition = piece.transform.position;
+
+        if (snappedSquare != null && piece.transform.position == snappedSquare.transform.position)
+        {
+            originalPosition = snappedSquare.transform.position;
+        }
+        else
+        {
+            originalPosition = piece.transform.position;
+        }
+
         isDragging = true;
     }
 
@@ -83,6 +92,7 @@ public class DragController : MonoBehaviour
     private void Drop()
     {
         isDragging = false;
+
         if (lastDragged != null && validTargets != null)
         {
             float snapRange = 0.5f;
@@ -106,7 +116,7 @@ public class DragController : MonoBehaviour
             }
             else
             {
-                lastDragged.transform.position = originalPosition;
+                lastDragged.transform.position = lastDragged.spawnPosition;
                 snappedSquare = null;
             }
         }

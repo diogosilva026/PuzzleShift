@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
+    #region VARIABLES
     private PuzzleLevelData levelData;
     [SerializeField] private GameObject puzzlePiecePrefab;
     [SerializeField] private GameObject targetSquarePrefab;
     [SerializeField] private List<GameObject> spawnedPieces = new();
     private List<TargetSquare> allTargetSquaresList = new();
+    #endregion
 
     private void Start()
     {
@@ -42,14 +44,10 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    #region SPAWN STUFF FROM JSON
+    // Spawns the Puzzle Pieces depending on the json setting
     private void SpawnPuzzlePieces()
     {
-        if (levelData == null)
-        {
-            Debug.LogError("Level data not loaded.");
-            return;
-        }
-
         // Creates a copy of the spawn points and shuffles them
         List<Vector3> shuffledSpawnPoints = new(levelData.pieceSpawnPoints);
         ShuffleList(shuffledSpawnPoints);
@@ -69,6 +67,7 @@ public class PuzzleManager : MonoBehaviour
 
             PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
             piece.correctIndex = levelData.pieceCorrectOrder[i];
+            piece.spawnPosition = spawnPos;
             spawnedPieces.Add(pieceObj);
 
             string spriteName = levelData.pieceSprites[i];
@@ -85,6 +84,7 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    // Spawns the Target Squares depending on the json setting
     private void SpawnTargetSquares()
     {
         for (int i = 0; i < levelData.targetPositions.Length; i++)
@@ -102,6 +102,7 @@ public class PuzzleManager : MonoBehaviour
             allTargetSquaresList.Add(square);
         }
     }
+    #endregion
 
     // Shuffle Method for List variables
     private void ShuffleList<T>(List<T> list)
