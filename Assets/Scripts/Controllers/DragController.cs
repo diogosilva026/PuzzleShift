@@ -95,6 +95,13 @@ public class DragController : MonoBehaviour
 
         if (lastDragged != null && validTargets != null)
         {
+            // Clear previous square if any
+            if (lastDragged.currentTargetSquare != null)
+            {
+                lastDragged.currentTargetSquare.ClearPiece();
+                lastDragged.currentTargetSquare = null;
+            }
+
             float snapRange = 0.5f;
             TargetSquare closest = null;
             float minDistance = Mathf.Infinity;
@@ -109,13 +116,17 @@ public class DragController : MonoBehaviour
                 }
             }
 
-            if (closest != null)
+            if (closest != null && !closest.IsOccupied)
             {
+                // Snap to target square and mark it as occupied
                 lastDragged.transform.position = closest.transform.position;
+                closest.AssignPiece(lastDragged);
+                lastDragged.currentTargetSquare = closest;
                 snappedSquare = closest;
             }
             else
             {
+                // Return to spawn position
                 lastDragged.transform.position = lastDragged.spawnPosition;
                 snappedSquare = null;
             }
