@@ -113,6 +113,19 @@ public class PuzzleManager : MonoBehaviour
             (list[i], list[j]) = (list[j], list[i]);
         }
     }
+
+    public void CheckWinCondition()
+    {
+        foreach (TargetSquare square in allTargetSquaresList)
+        {
+            if (!square.IsOccupied || square.occupiedBy.correctIndex != square.index)
+            {
+                return;
+            }
+        }
+
+        Debug.Log("Puzzle Complete!");
+    }
 }
 
 [System.Serializable]

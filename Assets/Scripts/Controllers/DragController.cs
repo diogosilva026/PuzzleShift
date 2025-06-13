@@ -132,6 +132,9 @@ public class DragController : MonoBehaviour
             }
         }
 
+        PuzzleManager puzzleManager = FindObjectOfType<PuzzleManager>();
+        puzzleManager.CheckWinCondition();
+
         lastDragged = null;
     }
 }
