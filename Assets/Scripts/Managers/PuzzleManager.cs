@@ -1,18 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// This script is responsible for loading level data, spawning puzzle pieces and target squares, and checking for puzzle completion
 public class PuzzleManager : MonoBehaviour
 {
     #region VARIABLES
-    private PuzzleLevelData levelData;
+    private PuzzleLevelData levelData; // Stores json configured level data
     [SerializeField] private GameObject puzzlePiecePrefab;
     [SerializeField] private GameObject targetSquarePrefab;
-    [SerializeField] private List<GameObject> spawnedPieces = new();
-    private List<TargetSquare> allTargetSquaresList = new();
+    [SerializeField] private List<GameObject> allSpawnedPiecesList = new();
+    [SerializeField] private List<TargetSquare> allTargetSquaresList = new();
     #endregion
 
     private void Start()
@@ -21,6 +19,7 @@ public class PuzzleManager : MonoBehaviour
         SpawnTargetSquares();
         SpawnPuzzlePieces();
 
+        // Provide DragController with a reference to all target squares
         DragController dragController = FindObjectOfType<DragController>();
         if (dragController != null )
         {
@@ -28,7 +27,7 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    // Loads the chosen puzzle/level data, connecting its json file with the PuzzleLevelData class
+    // Loads the chosen puzzle/level data from a json file named after the scene
     private void LoadLevelData()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -45,7 +44,7 @@ public class PuzzleManager : MonoBehaviour
     }
 
     #region SPAWN STUFF FROM JSON
-    // Spawns the Puzzle Pieces depending on the json setting
+    // Spawns the puzzle pieces using data from the json file
     private void SpawnPuzzlePieces()
     {
         // Creates a copy of the spawn points and shuffles them
@@ -56,20 +55,23 @@ public class PuzzleManager : MonoBehaviour
         {
             Vector3 spawnPos = shuffledSpawnPoints[i];
 
+            // Instantiate puzzle piece
             GameObject pieceObj = Instantiate(puzzlePiecePrefab, spawnPos, Quaternion.identity);
-
             pieceObj.layer = LayerMask.NameToLayer("PuzzlePiece");
-
             pieceObj.transform.localScale = levelData.pieceScale;
 
+            // Set collider size
             BoxCollider2D pieceCollider = pieceObj.GetComponent<BoxCollider2D>();
             pieceCollider.size = levelData.pieceColliderSize;
 
+            // Setup puzzle piece properties
             PuzzlePiece piece = pieceObj.GetComponent<PuzzlePiece>();
             piece.correctIndex = levelData.pieceCorrectOrder[i];
             piece.spawnPosition = spawnPos;
-            spawnedPieces.Add(pieceObj);
 
+            allSpawnedPiecesList.Add(pieceObj);
+
+            // Assign puzzle piece sprite
             string spriteName = levelData.pieceSprites[i];
             Sprite loadedSprite = Resources.Load<Sprite>($"Sprites/{spriteName}");
 
@@ -84,19 +86,21 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    // Spawns the Target Squares depending on the json setting
+    // Spawns the target squares using data from the json file
     private void SpawnTargetSquares()
     {
         for (int i = 0; i < levelData.targetPositions.Length; i++)
         {
-            GameObject target = Instantiate(targetSquarePrefab, levelData.targetPositions[i], Quaternion.identity);
+            // Instantiate target square
+            GameObject targetObj = Instantiate(targetSquarePrefab, levelData.targetPositions[i], Quaternion.identity);
+            targetObj.transform.localScale = levelData.targetScale;
 
-            target.transform.localScale = levelData.targetScale;
-
-            BoxCollider2D targetCollider = target.GetComponent<BoxCollider2D>();
+            // Set collider size
+            BoxCollider2D targetCollider = targetObj.GetComponent<BoxCollider2D>();
             targetCollider.size = levelData.targetSquareColliderSize;
 
-            TargetSquare square = target.GetComponent<TargetSquare>();
+            // Setup target square index
+            TargetSquare square = targetObj.GetComponent<TargetSquare>();
             square.index = i;
 
             allTargetSquaresList.Add(square);
@@ -114,6 +118,7 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+    // Checks if all puzzle pieces are correctly placed
     public void CheckWinCondition()
     {
         foreach (TargetSquare square in allTargetSquaresList)
@@ -124,10 +129,12 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
+        //TimerManager.Instance.EndTimer();
         Debug.Log("Puzzle Complete!");
     }
 }
 
+// Represents the level data loaded from the json file
 [System.Serializable]
 public class PuzzleLevelData
 {

@@ -39,6 +39,7 @@ public class TimerManager : MonoBehaviour
         }
     }
 
+    // Displays the timer UI in minutes and seconds
     private void UpdateTimerDisplay()
     {
         int minutes = Mathf.FloorToInt(timer / 60f);
@@ -61,7 +62,7 @@ public class TimerManager : MonoBehaviour
 
         if (isNewBest)
         {
-            // Trigger UI feedback
+            // Trigger new best UI feedback
         }
     }
 }

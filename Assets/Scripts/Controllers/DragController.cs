@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles dragging and dropping of puzzle pieces onto target squares
 public class DragController : MonoBehaviour
 {
     private bool isDragging = false;
@@ -27,6 +28,7 @@ public class DragController : MonoBehaviour
         HandleMouseUp();
     }
 
+    // Converts screen mouse position to world space position
     private Vector3 GetMouseWorldPosition()
     {
         Vector3 mouseScreenPos = Input.mousePosition;
@@ -35,11 +37,12 @@ public class DragController : MonoBehaviour
         return worldPos;
     }
 
+    // Initiates dragging if a puzzle piece is clicked
     private void HandleMouseDown(Vector3 mouseWorldPos)
     {
         if (!Input.GetMouseButtonDown(0)) return;
 
-        // Unity sometimes fails to hit 2D colliders unless you filter by layer explicitly
+        // Unity often fails to hit 2D colliders unless you filter by layer explicitly
         int puzzleLayerMask = LayerMask.GetMask("PuzzlePiece");
         RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, Mathf.Infinity, puzzleLayerMask);
 
@@ -53,6 +56,7 @@ public class DragController : MonoBehaviour
         }
     }
 
+    // Updates piece position while dragging
     private void HandleDragging(Vector3 mouseWorldPos)
     {
         if (isDragging && lastDragged != null)
@@ -61,6 +65,7 @@ public class DragController : MonoBehaviour
         }
     }
 
+    // Handles dropping the piece on mouse release
     private void HandleMouseUp()
     {
         if (isDragging && Input.GetMouseButtonUp(0))
@@ -69,10 +74,12 @@ public class DragController : MonoBehaviour
         }
     }
 
+    // Starts the drag operation for a selected piece
     private void BeginDrag(PuzzlePiece piece)
     {
         lastDragged = piece;
 
+        // If the piece is already snapped to a square, remember that as its original position
         if (snappedSquare != null && piece.transform.position == snappedSquare.transform.position)
         {
             originalPosition = snappedSquare.transform.position;
@@ -85,28 +92,31 @@ public class DragController : MonoBehaviour
         isDragging = true;
     }
 
+    // Moves the piece to follow the mouse cursor
     private void DragTo(Vector3 position)
     {
-        lastDragged.transform.position = new Vector2(position.x, position.y);
+        lastDragged.transform.position = (Vector2)position;
     }
 
+    // Drops the piece into a valid target square or resets its position
     private void Drop()
     {
         isDragging = false;
 
         if (lastDragged != null && validTargets != null)
         {
-            // Clear previous square if any
+            // Clear previous square reference if any
             if (lastDragged.currentTargetSquare != null)
             {
                 lastDragged.currentTargetSquare.ClearPiece();
                 lastDragged.currentTargetSquare = null;
             }
 
-            float snapRange = 0.5f;
+            float snapRange = 0.5f; // Max distance allowed for snapping
             TargetSquare closest = null;
             float minDistance = Mathf.Infinity;
 
+            // Find the closest valid target square within snap range
             foreach (TargetSquare target in validTargets)
             {
                 float distance = Vector2.Distance(lastDragged.transform.position, target.transform.position);
@@ -117,6 +127,7 @@ public class DragController : MonoBehaviour
                 }
             }
 
+            // If a valid target square is found and is unoccupied, snap the piece
             if (closest != null && !closest.IsOccupied)
             {
                 // Snap to target square and mark it as occupied
@@ -133,9 +144,11 @@ public class DragController : MonoBehaviour
             }
         }
 
+        // Check if the puzzle is complete after dropping
         PuzzleManager puzzleManager = FindObjectOfType<PuzzleManager>();
         puzzleManager.CheckWinCondition();
 
+        // Clear reference to the dragged piece
         lastDragged = null;
     }
 }
