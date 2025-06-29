@@ -47,6 +47,13 @@ public class TimerManager : MonoBehaviour
         ingameTimerTMP.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    // Starts the timer when starting a level
+    public void StartTimer()
+    {
+        timeIsRunning = true;
+        timer = 0f;
+    }
+
     // Pauses the timer
     public void PauseTimer() => timeIsRunning = false;
 

@@ -7,6 +7,7 @@ public class PuzzleManager : MonoBehaviour
 {
     #region VARIABLES
     private PuzzleLevelData levelData; // Stores json configured level data
+    [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject puzzlePiecePrefab;
     [SerializeField] private GameObject targetSquarePrefab;
     [SerializeField] private List<GameObject> allSpawnedPiecesList = new();
@@ -15,16 +16,24 @@ public class PuzzleManager : MonoBehaviour
 
     private void Start()
     {
-        LoadLevelData();
-        SpawnTargetSquares();
-        SpawnPuzzlePieces();
-
         // Provide DragController with a reference to all target squares
         DragController dragController = FindObjectOfType<DragController>();
         if (dragController != null )
         {
             dragController.validTargets = allTargetSquaresList;
         }
+        
+        StartLevel();
+    }
+
+    private void StartLevel()
+    {
+        LoadLevelData();
+        SpawnPuzzlePieces();
+        SpawnTargetSquares();
+
+        winScreen.SetActive(false);
+        //TimerManager.Instance.StartTimer();
     }
 
     // Loads the chosen puzzle/level data from a json file named after the scene
@@ -129,7 +138,14 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
+        foreach (GameObject pieceObj in allSpawnedPiecesList)
+        {
+            Collider2D col = pieceObj.GetComponent<Collider2D>();
+            col.enabled = false;
+        }
+
         //TimerManager.Instance.EndTimer();
+        winScreen.SetActive(true);
         Debug.Log("Puzzle Complete!");
     }
 }
