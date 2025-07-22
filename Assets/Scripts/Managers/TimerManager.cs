@@ -2,6 +2,7 @@ using AYellowpaper.SerializedCollections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class TimerManager : MonoBehaviour
 {
@@ -24,7 +25,9 @@ public class TimerManager : MonoBehaviour
     #endregion
 
     #region VARIABLES
-    [SerializeField] private TextMeshProUGUI ingameTimerTMP;
+    [SerializeField] private TextMeshProUGUI levelTimerTMP;
+    [SerializeField] private TextMeshProUGUI endLevelTimeTMP;
+    [SerializeField] private GameObject newBestText;
     [SerializeField] private float timer = 0f;
     [SerializeField] private bool timeIsRunning = false;
     [SerializeField] private string currentLevel;
@@ -39,12 +42,11 @@ public class TimerManager : MonoBehaviour
         }
     }
 
-    // Displays the timer UI in minutes and seconds
+    // Displays the timer UI in minutes, seconds and hundredths
     private void UpdateTimerDisplay()
     {
-        int minutes = Mathf.FloorToInt(timer / 60f);
-        int seconds = Mathf.FloorToInt(timer % 60f);
-        ingameTimerTMP.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        TimeSpan timeSpan = TimeSpan.FromSeconds(timer);
+        levelTimerTMP.text = timeSpan.ToString(@"mm\:ss\.ff");
     }
 
     // Starts the timer when starting a level
@@ -64,12 +66,11 @@ public class TimerManager : MonoBehaviour
     public void EndTimer()
     {
         timeIsRunning = false;
+
+        TimeSpan timeSpan = TimeSpan.FromSeconds(timer);
+        endLevelTimeTMP.text = timeSpan.ToString(@"mm\:ss\.ff");
         
         bool isNewBest = GameManager.Instance.SaveLevelTime(currentLevel, timer);
-
-        if (isNewBest)
-        {
-            // Trigger new best UI feedback
-        }
+        newBestText.SetActive(isNewBest);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 // This script handles dragging and dropping of puzzle pieces onto target squares
 public class DragController : MonoBehaviour
@@ -40,6 +41,9 @@ public class DragController : MonoBehaviour
     // Initiates dragging if a puzzle piece is clicked
     private void HandleMouseDown(Vector3 mouseWorldPos)
     {
+        // Ignore clicks over UI elements
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         if (!Input.GetMouseButtonDown(0)) return;
 
         // Unity often fails to hit 2D colliders unless you filter by layer explicitly

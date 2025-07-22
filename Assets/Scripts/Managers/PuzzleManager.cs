@@ -32,8 +32,8 @@ public class PuzzleManager : MonoBehaviour
         SpawnPuzzlePieces();
         SpawnTargetSquares();
 
+        TimerManager.Instance.StartTimer();
         winScreen.SetActive(false);
-        //TimerManager.Instance.StartTimer();
     }
 
     // Loads the chosen puzzle/level data from a json file named after the scene
@@ -138,13 +138,12 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
-        foreach (GameObject pieceObj in allSpawnedPiecesList)
-        {
-            Collider2D col = pieceObj.GetComponent<Collider2D>();
-            col.enabled = false;
-        }
+        PuzzleComplete();
+    }
 
-        //TimerManager.Instance.EndTimer();
+    private void PuzzleComplete()
+    {
+        TimerManager.Instance.EndTimer();
         winScreen.SetActive(true);
         Debug.Log("Puzzle Complete!");
     }
