@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private bool isGamePaused = false;
 
     void Start()
     {
@@ -15,7 +14,8 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            if (isGamePaused) ResumeGame();
+            else PauseGame();
         }
     }
 
@@ -23,11 +23,13 @@ public class PauseManager : MonoBehaviour
     {
         TimerManager.Instance.PauseTimer();
         pauseScreen.SetActive(true);
+        isGamePaused = true;
     }
 
     public void ResumeGame()
     {
         TimerManager.Instance.ResumeTimer();
         pauseScreen.SetActive(false);
+        isGamePaused = false;
     }
 }
