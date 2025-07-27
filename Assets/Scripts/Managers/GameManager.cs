@@ -49,10 +49,7 @@ namespace AYellowpaper.SerializedCollections
         public int GetTotalStars() => totalStars;
 
         // Changes the number of total stars collected
-        public void UpdateTotalStars(int value)
-        {
-            totalStars += value;
-        }
+        public void UpdateTotalStars(int value) => totalStars += value;
         #endregion
 
         #region TIMER STUFF

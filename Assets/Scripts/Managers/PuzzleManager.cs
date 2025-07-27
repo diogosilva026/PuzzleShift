@@ -144,6 +144,7 @@ public class PuzzleManager : MonoBehaviour
     private void PuzzleComplete()
     {
         TimerManager.Instance.EndTimer();
+        AudioManager.Instance.PlaySFX("Applause");
         winScreen.SetActive(true);
         Debug.Log("Puzzle Complete!");
     }
