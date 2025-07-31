@@ -31,6 +31,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<SoundData> musicTracks;
     [SerializeField] private int currentSongIndex = -1;
 
+    public bool IsMusicMuted { get; private set; }
+    public bool IsSFXMuted { get; private set; }
+
     private Dictionary<string, SoundData> soundCache = new();
     #endregion
 
@@ -61,6 +64,18 @@ public class AudioManager : MonoBehaviour
     {
         mixer.GetFloat(parameter, out float value);
         return value;
+    }
+
+    public void MuteMusic(bool mute)
+    {
+        IsMusicMuted = mute;
+        mixer.SetFloat("MusicVolume", mute ? -80f : 0f);
+    }
+
+    public void MuteSFX(bool mute)
+    {
+        IsSFXMuted = mute;
+        mixer.SetFloat("SFXVolume", mute ? -80f : 0f);
     }
     #endregion
 
@@ -112,12 +127,6 @@ public class AudioManager : MonoBehaviour
         musicSource.outputAudioMixerGroup = music.mixerGroup != null ? music.mixerGroup : musicGroup;
 
         musicSource.Play();
-    }
-
-    public void PauseMusic(bool paused)
-    {
-        if (paused) musicSource.Pause();
-        else musicSource.UnPause();
     }
     #endregion
 
