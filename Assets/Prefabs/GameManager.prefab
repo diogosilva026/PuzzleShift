@@ -44,12 +44,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf8a2f23e4b102449a3cc972067d0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEasy1Complete: 0
-  isEasy2Complete: 0
-  isEasy3Complete: 0
-  isMedium1Complete: 0
-  isMedium2Complete: 0
-  isMedium3Complete: 0
-  isHard1Complete: 0
-  isHard2Complete: 0
-  isHard3Complete: 0
+  totalGameStars: 27
+  totalPlayerStars: 0
+  levelStarThresholds:
+    _serializedList:
+    - Key: Easy1
+      Value:
+        timeFor2Stars: 90
+        timeFor3Stars: 30
+    - Key: Easy2
+      Value:
+        timeFor2Stars: 90
+        timeFor3Stars: 30
+    - Key: Easy3
+      Value:
+        timeFor2Stars: 90
+        timeFor3Stars: 30
+    - Key: Medium1
+      Value:
+        timeFor2Stars: 180
+        timeFor3Stars: 60
+    - Key: Medium2
+      Value:
+        timeFor2Stars: 180
+        timeFor3Stars: 60
+    - Key: Medium3
+      Value:
+        timeFor2Stars: 180
+        timeFor3Stars: 60
+    - Key: Hard1
+      Value:
+        timeFor2Stars: 360
+        timeFor3Stars: 120
+    - Key: Hard2
+      Value:
+        timeFor2Stars: 360
+        timeFor3Stars: 120
+    - Key: Hard3
+      Value:
+        timeFor2Stars: 360
+        timeFor3Stars: 120
+  bestLevelStars:
+    _serializedList: []
+  bestLevelCompletionTimes:
+    _serializedList: []

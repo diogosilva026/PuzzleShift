@@ -143,10 +143,12 @@ public class PuzzleManager : MonoBehaviour
 
     private void PuzzleComplete()
     {
+        PauseManager pauseManager = FindObjectOfType<PauseManager>();
+        Destroy(pauseManager);
+
+        winScreen.SetActive(true);
         TimerManager.Instance.EndTimer();
         AudioManager.Instance.PlaySFX("Applause");
-        winScreen.SetActive(true);
-        Debug.Log("Puzzle Complete!");
     }
 }
 

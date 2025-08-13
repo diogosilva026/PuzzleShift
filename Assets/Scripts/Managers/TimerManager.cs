@@ -72,5 +72,11 @@ public class TimerManager : MonoBehaviour
         
         bool isNewBest = GameManager.Instance.SaveLevelTime(currentLevel, timer);
         newBestText.SetActive(isNewBest);
+
+        int starsEarned = GameManager.Instance.CalculateLevelTimeStars(currentLevel, timer);
+        GameManager.Instance.UpdateStarsForLevel(currentLevel, starsEarned);
+
+        StarsUIHandler starsUIHandler = FindObjectOfType<StarsUIHandler>();
+        starsUIHandler.DisplayLevelEndingStars(starsEarned);
     }
 }
