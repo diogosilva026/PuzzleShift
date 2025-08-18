@@ -56,12 +56,14 @@ public class AudioSettingsUI : MonoBehaviour
         sfxToggle.onValueChanged.AddListener(ToggleSFXMute);
     }
 
+    // Register the SaveSettings method to be called when the player releases the cursor on the volume sliders
     private void RegisterPointerUpListeners()
     {
         AddPointerUpListener(musicSlider, SaveSettings);
         AddPointerUpListener(sfxSlider, SaveSettings);
     }
 
+    // Adds a SliderPointerUp component to the given slider
     private void AddPointerUpListener(Slider slider, System.Action action)
     {
         var pointerUp = slider.gameObject.GetComponent<SliderPointerUp>();
@@ -71,6 +73,7 @@ public class AudioSettingsUI : MonoBehaviour
         pointerUp.onPointerUp = action;
     }
 
+    // Save game action
     private void SaveSettings()
     {
         GameManager.Instance.SaveGame();

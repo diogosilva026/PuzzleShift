@@ -1,4 +1,3 @@
-using System.Collections;
 using System.IO;
 using UnityEngine;
 
@@ -90,6 +89,34 @@ namespace AYellowpaper.SerializedCollections
                 AudioManager.Instance.MuteMusic(data.isMusicMuted);
                 AudioManager.Instance.MuteSFX(data.isSFXMuted);
             }
+        }
+
+        public void DeleteProgress()
+        {
+            // Reset all player progress (excluding the audio)
+            totalPlayerStars = 0;
+            bestLevelStars.Clear();
+            bestLevelCompletionTimes.Clear();
+
+            // Keep audio variables as they are
+            float musicVol = AudioManager.Instance.GetMusicVolume();
+            float sfxVol = AudioManager.Instance.GetSFXVolume();
+            bool musicMuted = AudioManager.Instance.IsMusicMuted;
+            bool sfxMuted = AudioManager.Instance.IsSFXMuted;
+
+            SaveData data = new SaveData
+            {
+                totalPlayerStars = totalPlayerStars,
+                bestLevelStars = new SerializedDictionary<string, int>(bestLevelStars),
+                bestLevelCompletionTimes = new SerializedDictionary<string, float>(bestLevelCompletionTimes),
+                musicVolume = musicVol,
+                sfxVolume = sfxVol,
+                isMusicMuted = musicMuted,
+                isSFXMuted = sfxMuted
+            };
+
+            string json = JsonUtility.ToJson(data, true);
+            File.WriteAllText(savePath, json);
         }
         #endregion
 
