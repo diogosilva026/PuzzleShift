@@ -31,13 +31,17 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<SoundData> musicTracks;
     [SerializeField] private int currentSongIndex = -1;
 
+    public bool IsMasterMuted { get; private set; }
     public bool IsMusicMuted { get; private set; }
     public bool IsSFXMuted { get; private set; }
+    public float LastMasterVolume { get; private set; } = 1f;
+    public float LastMusicVolume { get; private set; } = 1f;
+    public float LastSFXVolume { get; private set; } = 1f;
 
     private Dictionary<string, SoundData> soundCache = new();
     #endregion
 
-    void Start()
+    private void Start()
     {
         // Temporary while there is no save system
         if (musicTracks.Count == 0) return;
@@ -52,31 +56,55 @@ public class AudioManager : MonoBehaviour
     }
 
     #region VOLUME
-    public void SetMasterVolume(float value) => mixer.SetFloat("MasterVolume", value);
-    public void SetMusicVolume(float value) => mixer.SetFloat("MusicVolume", value);
-    public void SetSFXVolume(float value) => mixer.SetFloat("SFXVolume", value);
 
-    public float GetMasterVolume() => GetVolume("MasterVolume");
-    public float GetMusicVolume() => GetVolume("MusicVolume");
-    public float GetSFXVolume() => GetVolume("SFXVolume");
-
-    private float GetVolume(string parameter)
+    #region SETTERS
+    public void SetMasterVolume(float linearValue)
     {
-        mixer.GetFloat(parameter, out float value);
-        return value;
+        LastMasterVolume = linearValue;
+        mixer.SetFloat("MasterVolume", LinearToDb(linearValue));
     }
 
+    public void SetMusicVolume(float linearValue)
+    {
+        LastMusicVolume = linearValue;
+        mixer.SetFloat("MusicVolume", LinearToDb(linearValue));
+    }
+
+    public void SetSFXVolume(float linearValue)
+    {
+        LastSFXVolume = linearValue;
+        mixer.SetFloat("SFXVolume", LinearToDb(linearValue));
+    }
+    #endregion
+
+    #region GETTERS
+    public float GetMasterVolume() => LastMasterVolume;
+
+    public float GetMusicVolume() => LastMusicVolume;
+
+    public float GetSFXVolume() => LastSFXVolume;
+    #endregion
+
+    #region AUDIO CONVERSION
+    private float LinearToDb(float linear) => Mathf.Approximately(linear, 0f) ? -80f : Mathf.Log10(linear) * 20f;
+
+    private float DbToLinear(float dB) => Mathf.Pow(10f, dB / 20f);
+    #endregion
+
+    #region MUTE
     public void MuteMusic(bool mute)
     {
         IsMusicMuted = mute;
-        mixer.SetFloat("MusicVolume", mute ? -80f : 0f);
+        mixer.SetFloat("MusicVolume", mute ? -80f : LinearToDb(LastMusicVolume));
     }
 
     public void MuteSFX(bool mute)
     {
         IsSFXMuted = mute;
-        mixer.SetFloat("SFXVolume", mute ? -80f : 0f);
+        mixer.SetFloat("SFXVolume", mute ? -80f : LinearToDb(LastSFXVolume));
     }
+    #endregion
+
     #endregion
 
     #region SFX

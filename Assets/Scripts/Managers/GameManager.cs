@@ -56,6 +56,10 @@ namespace AYellowpaper.SerializedCollections
                 totalPlayerStars = totalPlayerStars,
                 bestLevelStars = new SerializedDictionary<string, int>(bestLevelStars),
                 bestLevelCompletionTimes = new SerializedDictionary<string, float>(bestLevelCompletionTimes),
+                musicVolume = AudioManager.Instance.GetMusicVolume(),
+                sfxVolume = AudioManager.Instance.GetSFXVolume(),
+                isMusicMuted = AudioManager.Instance.IsMusicMuted,
+                isSFXMuted = AudioManager.Instance.IsSFXMuted
             };
 
             // Converts the SaveData object into a json string
@@ -80,6 +84,11 @@ namespace AYellowpaper.SerializedCollections
                 totalPlayerStars = data.totalPlayerStars;
                 bestLevelStars = new SerializedDictionary<string, int>(data.bestLevelStars);
                 bestLevelCompletionTimes = new SerializedDictionary<string, float>(data.bestLevelCompletionTimes);
+
+                AudioManager.Instance.SetMusicVolume(data.musicVolume);
+                AudioManager.Instance.SetSFXVolume(data.sfxVolume);
+                AudioManager.Instance.MuteMusic(data.isMusicMuted);
+                AudioManager.Instance.MuteSFX(data.isSFXMuted);
             }
         }
         #endregion

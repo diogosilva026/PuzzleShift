@@ -1,15 +1,14 @@
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.UI;
 
-// This script handles the UI for audio volume settings
+// Handles the UI for audio volume and mute settings
 public class AudioSettingsUI : MonoBehaviour
 {
     #region VARIABLES
     [Header("Volume Sliders")]
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
-    [SerializeField] private float lastMusicSliderValue = 1f;
-    [SerializeField] private float lastSFXSliderValue = 1f;
 
     [Header("Music Mute Toggle")]
     [SerializeField] private Toggle musicToggle;
@@ -28,31 +27,23 @@ public class AudioSettingsUI : MonoBehaviour
     {
         InitializeSlidersAndToggles();
         RegisterUIListeners();
+        RegisterPointerUpListeners();
     }
 
     // Initialize the slider values and toggle states based on the AudioManager
     private void InitializeSlidersAndToggles()
     {
-        float musicDb = AudioManager.Instance.GetMusicVolume();
-        float sfxDb = AudioManager.Instance.GetSFXVolume();
-
-        float musicValue = DbToSlider(musicDb);
-        float sfxValue = DbToSlider(sfxDb);
-
-        bool musicMuted = AudioManager.Instance.IsMusicMuted || musicDb <= -79.9f;
-        bool sfxMuted = AudioManager.Instance.IsSFXMuted || sfxDb <= -79.9f;
-
         // Set sliders without triggering any callbacks
-        musicSlider.SetValueWithoutNotify(musicValue);
-        sfxSlider.SetValueWithoutNotify(sfxValue);
+        musicSlider.SetValueWithoutNotify(AudioManager.Instance.GetMusicVolume());
+        sfxSlider.SetValueWithoutNotify(AudioManager.Instance.GetSFXVolume());
 
         // Set toggle states
-        musicToggle.SetIsOnWithoutNotify(musicMuted);
-        sfxToggle.SetIsOnWithoutNotify(sfxMuted);
+        musicToggle.SetIsOnWithoutNotify(AudioManager.Instance.IsMusicMuted);
+        sfxToggle.SetIsOnWithoutNotify(AudioManager.Instance.IsSFXMuted);
 
         // Set initial icon sprites
-        UpdateMusicSprite(musicMuted);
-        UpdateSFXSprite(sfxMuted);
+        UpdateMusicSprite(AudioManager.Instance.IsMusicMuted);
+        UpdateSFXSprite(AudioManager.Instance.IsSFXMuted);
     }
 
     // Register listeners for UI
@@ -65,54 +56,49 @@ public class AudioSettingsUI : MonoBehaviour
         sfxToggle.onValueChanged.AddListener(ToggleSFXMute);
     }
 
-    #region AUDIO CONVERSION METHODS
-    // Convert a slider value to dB
-    private float SliderToDb(float sliderValue)
+    private void RegisterPointerUpListeners()
     {
-        sliderValue = Mathf.Clamp(sliderValue, 0.0001f, 1f);
-        return Mathf.Log10(sliderValue) * 20f;
+        AddPointerUpListener(musicSlider, SaveSettings);
+        AddPointerUpListener(sfxSlider, SaveSettings);
     }
 
-    // Convert a dB value to a slider range value
-    private float DbToSlider(float dbValue)
+    private void AddPointerUpListener(Slider slider, System.Action action)
     {
-        return Mathf.Pow(10f, dbValue / 20f);
+        var pointerUp = slider.gameObject.GetComponent<SliderPointerUp>();
+        if (pointerUp == null)
+            pointerUp = slider.gameObject.AddComponent<SliderPointerUp>();
+
+        pointerUp.onPointerUp = action;
     }
-    #endregion
+
+    private void SaveSettings()
+    {
+        GameManager.Instance.SaveGame();
+    }
 
     #region VOLUME HANDLERS
-    // Set music volume based on slider value
-    private void SetMusicVolume(float sliderValue)
+    private void SetMusicVolume(float value)
     {
-        float dbValue = SliderToDb(sliderValue);
-
-        // If the user unmutes music via slider, updates the toggle and sprite
-        if (AudioManager.Instance.IsMusicMuted && dbValue > -80f)
+        if (AudioManager.Instance.IsMusicMuted && value > 0f)
         {
             musicToggle.SetIsOnWithoutNotify(false);
             AudioManager.Instance.MuteMusic(false);
             UpdateMusicSprite(false);
         }
 
-        AudioManager.Instance.SetMusicVolume(dbValue);
-        lastMusicSliderValue = sliderValue;
+        AudioManager.Instance.SetMusicVolume(value);
     }
 
-    // Set SFX volume based on slider value
-    private void SetSFXVolume(float sliderValue)
+    private void SetSFXVolume(float value)
     {
-        float dbValue = SliderToDb(sliderValue);
-
-        // If the user unmutes sfx via slider, updates the toggle and sprite
-        if (AudioManager.Instance.IsSFXMuted && dbValue > -80f)
+        if (AudioManager.Instance.IsSFXMuted && value > 0f)
         {
             sfxToggle.SetIsOnWithoutNotify(false);
             AudioManager.Instance.MuteSFX(false);
             UpdateSFXSprite(false);
         }
 
-        AudioManager.Instance.SetSFXVolume(dbValue);
-        lastSFXSliderValue = sliderValue;
+        AudioManager.Instance.SetSFXVolume(value);
     }
     #endregion
 
@@ -120,37 +106,29 @@ public class AudioSettingsUI : MonoBehaviour
     // When the music mute state is toggled
     public void ToggleMusicMute(bool isMuted)
     {
-        if (isMuted)
+        AudioManager.Instance.MuteMusic(isMuted);
+
+        if (!isMuted)
         {
-            lastMusicSliderValue = musicSlider.value;
-            AudioManager.Instance.MuteMusic(true);
-        }
-        else
-        {
-            AudioManager.Instance.MuteMusic(false);
-            musicSlider.SetValueWithoutNotify(lastMusicSliderValue);
-            AudioManager.Instance.SetMusicVolume(SliderToDb(lastMusicSliderValue));
+            musicSlider.SetValueWithoutNotify(AudioManager.Instance.LastMusicVolume);
         }
 
         UpdateMusicSprite(isMuted);
+        SaveSettings();
     }
 
     // When the sfx mute state is toggled
     public void ToggleSFXMute(bool isMuted)
     {
-        if (isMuted)
+        AudioManager.Instance.MuteSFX(isMuted);
+
+        if (!isMuted)
         {
-            lastSFXSliderValue = sfxSlider.value;
-            AudioManager.Instance.MuteSFX(true);
-        }
-        else
-        {
-            AudioManager.Instance.MuteSFX(false);
-            sfxSlider.SetValueWithoutNotify(lastSFXSliderValue);
-            AudioManager.Instance.SetSFXVolume(SliderToDb(lastSFXSliderValue));
+            sfxSlider.SetValueWithoutNotify(AudioManager.Instance.LastSFXVolume);
         }
 
         UpdateSFXSprite(isMuted);
+        SaveSettings();
     }
     #endregion
 
