@@ -1,3 +1,5 @@
+using System.Collections;
+using System.IO;
 using UnityEngine;
 
 // Using this namespace so I can serialize dictionaries
@@ -34,6 +36,78 @@ namespace AYellowpaper.SerializedCollections
         [Header("Timer Stuff")]
         [SerializedDictionary("Level Name", "Best Time")]
         public SerializedDictionary<string, float> bestLevelCompletionTimes;
+
+        [Header("Game Save Stuff")]
+        private string savePath;
+        #endregion
+
+        private void Start()
+        {
+            savePath = Path.Combine(Application.persistentDataPath, "save.json");
+            LoadGame();
+        }
+
+        #region GAME SAVE STUFF
+        // Saves the player's progress into a json file on disk
+        public void SaveGame()
+        {
+            SaveData data = new SaveData
+            {
+                totalPlayerStars = totalPlayerStars,
+                bestLevelStars = new SerializedDictionary<string, int>(bestLevelStars),
+                bestLevelCompletionTimes = new SerializedDictionary<string, float>(bestLevelCompletionTimes),
+            };
+
+            // Converts the SaveData object into a json string
+            string json = JsonUtility.ToJson(data, true);
+
+            // Writes the json string into a file at "savePath"
+            File.WriteAllText(savePath, json);
+        }
+
+        // Loads the player's progress into the game from the json file
+        public void LoadGame()
+        {
+            if (File.Exists(savePath))
+            {
+                // Reads all text from the save file
+                string json = File.ReadAllText(savePath);
+
+                // Converts the json text back into SaveData object
+                SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+                // Restores the saved data back into the GameManager
+                totalPlayerStars = data.totalPlayerStars;
+                bestLevelStars = new SerializedDictionary<string, int>(data.bestLevelStars);
+                bestLevelCompletionTimes = new SerializedDictionary<string, float>(data.bestLevelCompletionTimes);
+            }
+        }
+        #endregion
+
+        #region TIMER STUFF
+        // Saves the best time for each level in the dictionary, but only if it is faster than the previous one
+        public bool SaveLevelTime(string levelName, float time)
+        {
+            if (bestLevelCompletionTimes.ContainsKey(levelName))
+            {
+                if (time < bestLevelCompletionTimes[levelName])
+                {
+                    bestLevelCompletionTimes[levelName] = time;
+                    SaveGame();
+                    return true; // New best time
+                }
+                return false; // Not a new best time
+            }
+            else
+            {
+                bestLevelCompletionTimes.Add(levelName, time); // Adds the level and completed time if it is not already in the dictionary
+                SaveGame();
+                return true; // First time for this level - considered a new best
+            }
+        }
+
+        // Returns the best time for each level
+        public float GetLevelTime(string levelName) => bestLevelCompletionTimes.TryGetValue(levelName, out float time) ? time : 0f;
         #endregion
 
         #region STARS STUFF
@@ -47,7 +121,6 @@ namespace AYellowpaper.SerializedCollections
 
         // Changes the number of total stars collected
         public void UpdateTotalPlayerStars(int value) => totalPlayerStars += value;
-
         #endregion
 
         #region STARS THRESHOLD
@@ -78,6 +151,8 @@ namespace AYellowpaper.SerializedCollections
                     bestLevelStars[levelName] = newStars;
                     int addedStars = newStars - previousBest;
                     UpdateTotalPlayerStars(addedStars);
+
+                    SaveGame();
                     return addedStars;
                 }
             }
@@ -85,8 +160,11 @@ namespace AYellowpaper.SerializedCollections
             {
                 bestLevelStars.Add(levelName, newStars);
                 UpdateTotalPlayerStars(newStars);
+
+                SaveGame();
             }
 
+            SaveGame();
             return 0;
         }
 
@@ -107,30 +185,6 @@ namespace AYellowpaper.SerializedCollections
         }
         #endregion
 
-        #endregion
-
-        #region TIMER STUFF
-        // Saves the best time for each level in the dictionary, but only if it is faster than the previous one
-        public bool SaveLevelTime(string levelName, float time)
-        {
-            if (bestLevelCompletionTimes.ContainsKey(levelName))
-            {
-                if (time < bestLevelCompletionTimes[levelName])
-                {
-                    bestLevelCompletionTimes[levelName] = time;
-                    return true; // New best time
-                }
-                return false; // Not a new best time
-            }
-            else
-            {
-                bestLevelCompletionTimes.Add(levelName, time); // Adds the level and completed time if it is not already in the dictionary
-                return true; // First time for this level - considered a new best
-            }
-        }
-
-        // Returns the best time for each level
-        public float GetLevelTime(string levelName) => bestLevelCompletionTimes.TryGetValue(levelName, out float time) ? time : 0f;
         #endregion
     }
 }
