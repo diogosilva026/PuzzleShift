@@ -702,7 +702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023303020832195704, guid: ed7b566d7bafa584f8ae833197cac700, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMedium2
+      value: LoadMedium1
       objectReference: {fileID: 0}
     - target: {fileID: 2023303020832195704, guid: ed7b566d7bafa584f8ae833197cac700, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
