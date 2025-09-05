@@ -37,12 +37,12 @@
         {"x": 5, "y": -3.5, "z": 0.0}
     ],
     "pieceSprites": [
-	"Medium1/City_0", "Medium1/City_1", "Medium1/City_2",
-	"Medium1/City_3", "Medium1/City_4", "Medium1/City_5",
-	"Medium1/City_6", "Medium1/City_7", "Medium1/City_8",
-	"Medium1/City_9", "Medium1/City_10", "Medium1/City_11",
-	"Medium1/City_12", "Medium1/City_13", "Medium1/City_14",
-	"Medium1/City_15"
+	"MediumLevels/Medium1/City_0", "MediumLevels/Medium1/City_1", "MediumLevels/Medium1/City_2",
+	"MediumLevels/Medium1/City_3", "MediumLevels/Medium1/City_4", "MediumLevels/Medium1/City_5",
+	"MediumLevels/Medium1/City_6", "MediumLevels/Medium1/City_7", "MediumLevels/Medium1/City_8",
+	"MediumLevels/Medium1/City_9", "MediumLevels/Medium1/City_10", "MediumLevels/Medium1/City_11",
+	"MediumLevels/Medium1/City_12", "MediumLevels/Medium1/City_13", "MediumLevels/Medium1/City_14",
+	"MediumLevels/Medium1/City_15"
 ],
 	"pieceColliderSize": {"x": 9.277, "y": 9.277},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

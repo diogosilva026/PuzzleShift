@@ -55,15 +55,15 @@
         {"x": 7.7, "y": -3.7, "z": 0.0}
     ],
     "pieceSprites": [
-	"Hard3/Parrot_0", "Hard3/Parrot_1", "Hard3/Parrot_2",
-	"Hard3/Parrot_3", "Hard3/Parrot_4", "Hard3/Parrot_5",
-	"Hard3/Parrot_6", "Hard3/Parrot_7", "Hard3/Parrot_8",
-	"Hard3/Parrot_9", "Hard3/Parrot_10", "Hard3/Parrot_11",
-	"Hard3/Parrot_12", "Hard3/Parrot_13", "Hard3/Parrot_14",
-	"Hard3/Parrot_15", "Hard3/Parrot_16", "Hard3/Parrot_17",
-	"Hard3/Parrot_18", "Hard3/Parrot_19", "Hard3/Parrot_20",
-	"Hard3/Parrot_21", "Hard3/Parrot_22", "Hard3/Parrot_23",
-	"Hard3/Parrot_24"
+	"HardLevels/Hard3/Parrot_0", "HardLevels/Hard3/Parrot_1", "HardLevels/Hard3/Parrot_2",
+	"HardLevels/Hard3/Parrot_3", "HardLevels/Hard3/Parrot_4", "HardLevels/Hard3/Parrot_5",
+	"HardLevels/Hard3/Parrot_6", "HardLevels/Hard3/Parrot_7", "HardLevels/Hard3/Parrot_8",
+	"HardLevels/Hard3/Parrot_9", "HardLevels/Hard3/Parrot_10", "HardLevels/Hard3/Parrot_11",
+	"HardLevels/Hard3/Parrot_12", "HardLevels/Hard3/Parrot_13", "HardLevels/Hard3/Parrot_14",
+	"HardLevels/Hard3/Parrot_15", "HardLevels/Hard3/Parrot_16", "HardLevels/Hard3/Parrot_17",
+	"HardLevels/Hard3/Parrot_18", "HardLevels/Hard3/Parrot_19", "HardLevels/Hard3/Parrot_20",
+	"HardLevels/Hard3/Parrot_21", "HardLevels/Hard3/Parrot_22", "HardLevels/Hard3/Parrot_23",
+	"HardLevels/Hard3/Parrot_24"
 ],
 	"pieceColliderSize": {"x": 5.184, "y": 5.184},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

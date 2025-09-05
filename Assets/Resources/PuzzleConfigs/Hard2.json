@@ -55,15 +55,15 @@
         {"x": 7.7, "y": -3.7, "z": 0.0}
     ],
     "pieceSprites": [
-	"Hard2/Cat_0", "Hard2/Cat_1", "Hard2/Cat_2",
-	"Hard2/Cat_3", "Hard2/Cat_4", "Hard2/Cat_5",
-	"Hard2/Cat_6", "Hard2/Cat_7", "Hard2/Cat_8",
-	"Hard2/Cat_9", "Hard2/Cat_10", "Hard2/Cat_11",
-	"Hard2/Cat_12", "Hard2/Cat_13", "Hard2/Cat_14",
-	"Hard2/Cat_15", "Hard2/Cat_16", "Hard2/Cat_17",
-	"Hard2/Cat_18", "Hard2/Cat_19", "Hard2/Cat_20",
-	"Hard2/Cat_21", "Hard2/Cat_22", "Hard2/Cat_23",
-	"Hard2/Cat_24"
+	"HardLevels/Hard2/Cat_0", "HardLevels/Hard2/Cat_1", "HardLevels/Hard2/Cat_2",
+	"HardLevels/Hard2/Cat_3", "HardLevels/Hard2/Cat_4", "HardLevels/Hard2/Cat_5",
+	"HardLevels/Hard2/Cat_6", "HardLevels/Hard2/Cat_7", "HardLevels/Hard2/Cat_8",
+	"HardLevels/Hard2/Cat_9", "HardLevels/Hard2/Cat_10", "HardLevels/Hard2/Cat_11",
+	"HardLevels/Hard2/Cat_12", "HardLevels/Hard2/Cat_13", "HardLevels/Hard2/Cat_14",
+	"HardLevels/Hard2/Cat_15", "HardLevels/Hard2/Cat_16", "HardLevels/Hard2/Cat_17",
+	"HardLevels/Hard2/Cat_18", "HardLevels/Hard2/Cat_19", "HardLevels/Hard2/Cat_20",
+	"HardLevels/Hard2/Cat_21", "HardLevels/Hard2/Cat_22", "HardLevels/Hard2/Cat_23",
+	"HardLevels/Hard2/Cat_24"
 ],
 	"pieceColliderSize": {"x": 10.928, "y": 10.928},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

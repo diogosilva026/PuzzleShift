@@ -23,9 +23,9 @@
         {"x": 4.0, "y": 0.0, "z": 0.0}
     ],
     "pieceSprites": [
-	"Easy1/Squirrel_0", "Easy1/Squirrel_1", "Easy1/Squirrel_2",
-	"Easy1/Squirrel_3", "Easy1/Squirrel_4", "Easy1/Squirrel_5",
-	"Easy1/Squirrel_6", "Easy1/Squirrel_7", "Easy1/Squirrel_8"
+	"EasyLevels/Easy1/Squirrel_0", "EasyLevels/Easy1/Squirrel_1", "EasyLevels/Easy1/Squirrel_2",
+	"EasyLevels/Easy1/Squirrel_3", "EasyLevels/Easy1/Squirrel_4", "EasyLevels/Easy1/Squirrel_5",
+	"EasyLevels/Easy1/Squirrel_6", "EasyLevels/Easy1/Squirrel_7", "EasyLevels/Easy1/Squirrel_8"
 ],
 	"pieceColliderSize": {"x": 8.61, "y": 8.61},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

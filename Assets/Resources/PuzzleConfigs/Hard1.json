@@ -55,15 +55,15 @@
         {"x": 7.7, "y": -3.7, "z": 0.0}
     ],
     "pieceSprites": [
-	"Hard1/Penguins_0", "Hard1/Penguins_1", "Hard1/Penguins_2",
-	"Hard1/Penguins_3", "Hard1/Penguins_4", "Hard1/Penguins_5",
-	"Hard1/Penguins_6", "Hard1/Penguins_7", "Hard1/Penguins_8",
-	"Hard1/Penguins_9", "Hard1/Penguins_10", "Hard1/Penguins_11",
-	"Hard1/Penguins_12", "Hard1/Penguins_13", "Hard1/Penguins_14",
-	"Hard1/Penguins_15", "Hard1/Penguins_16", "Hard1/Penguins_17",
-	"Hard1/Penguins_18", "Hard1/Penguins_19", "Hard1/Penguins_20",
-	"Hard1/Penguins_21", "Hard1/Penguins_22", "Hard1/Penguins_23",
-	"Hard1/Penguins_24"
+	"HardLevels/Hard1/Penguins_0", "HardLevels/Hard1/Penguins_1", "HardLevels/Hard1/Penguins_2",
+	"HardLevels/Hard1/Penguins_3", "HardLevels/Hard1/Penguins_4", "HardLevels/Hard1/Penguins_5",
+	"HardLevels/Hard1/Penguins_6", "HardLevels/Hard1/Penguins_7", "HardLevels/Hard1/Penguins_8",
+	"HardLevels/Hard1/Penguins_9", "HardLevels/Hard1/Penguins_10", "HardLevels/Hard1/Penguins_11",
+	"HardLevels/Hard1/Penguins_12", "HardLevels/Hard1/Penguins_13", "HardLevels/Hard1/Penguins_14",
+	"HardLevels/Hard1/Penguins_15", "HardLevels/Hard1/Penguins_16", "HardLevels/Hard1/Penguins_17",
+	"HardLevels/Hard1/Penguins_18", "HardLevels/Hard1/Penguins_19", "HardLevels/Hard1/Penguins_20",
+	"HardLevels/Hard1/Penguins_21", "HardLevels/Hard1/Penguins_22", "HardLevels/Hard1/Penguins_23",
+	"HardLevels/Hard1/Penguins_24"
 ],
 	"pieceColliderSize": {"x": 5.986, "y": 5.986},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

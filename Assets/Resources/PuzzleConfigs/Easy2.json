@@ -23,9 +23,9 @@
         {"x": 4.0, "y": 0.0, "z": 0.0}
     ],
     "pieceSprites": [
-	"Easy2/Terrace_0", "Easy2/Terrace_1", "Easy2/Terrace_2",
-	"Easy2/Terrace_3", "Easy2/Terrace_4", "Easy2/Terrace_5",
-	"Easy2/Terrace_6", "Easy2/Terrace_7", "Easy2/Terrace_8"
+	"EasyLevels/Easy2/Terrace_0", "EasyLevels/Easy2/Terrace_1", "EasyLevels/Easy2/Terrace_2",
+	"EasyLevels/Easy2/Terrace_3", "EasyLevels/Easy2/Terrace_4", "EasyLevels/Easy2/Terrace_5",
+	"EasyLevels/Easy2/Terrace_6", "EasyLevels/Easy2/Terrace_7", "EasyLevels/Easy2/Terrace_8"
 ],
 	"pieceColliderSize": {"x": 6.27, "y": 6.27},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

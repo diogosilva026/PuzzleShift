@@ -37,12 +37,12 @@
         {"x": 5, "y": -3.5, "z": 0.0}
     ],
     "pieceSprites": [
-	"Medium3/Pastry_0", "Medium3/Pastry_1", "Medium3/Pastry_2",
-	"Medium3/Pastry_3", "Medium3/Pastry_4", "Medium3/Pastry_5",
-	"Medium3/Pastry_6", "Medium3/Pastry_7", "Medium3/Pastry_8",
-	"Medium3/Pastry_9", "Medium3/Pastry_10", "Medium3/Pastry_11",
-	"Medium3/Pastry_12", "Medium3/Pastry_13", "Medium3/Pastry_14",
-	"Medium3/Pastry_15"
+	"MediumLevels/Medium3/Pastry_0", "MediumLevels/Medium3/Pastry_1", "MediumLevels/Medium3/Pastry_2",
+	"MediumLevels/Medium3/Pastry_3", "MediumLevels/Medium3/Pastry_4", "MediumLevels/Medium3/Pastry_5",
+	"MediumLevels/Medium3/Pastry_6", "MediumLevels/Medium3/Pastry_7", "MediumLevels/Medium3/Pastry_8",
+	"MediumLevels/Medium3/Pastry_9", "MediumLevels/Medium3/Pastry_10", "MediumLevels/Medium3/Pastry_11",
+	"MediumLevels/Medium3/Pastry_12", "MediumLevels/Medium3/Pastry_13", "MediumLevels/Medium3/Pastry_14",
+	"MediumLevels/Medium3/Pastry_15"
 ],
 	"pieceColliderSize": {"x": 9.12, "y": 9.12},
 	"targetSquareColliderSize": {"x": 1, "y": 1},

@@ -23,9 +23,9 @@
         {"x": 4.0, "y": 0.0, "z": 0.0}
     ],
     "pieceSprites": [
-	"Easy3/Suitcase_0", "Easy3/Suitcase_1", "Easy3/Suitcase_2",
-	"Easy3/Suitcase_3", "Easy3/Suitcase_4", "Easy3/Suitcase_5",
-	"Easy3/Suitcase_6", "Easy3/Suitcase_7", "Easy3/Suitcase_8"
+	"EasyLevels/Easy3/Suitcase_0", "EasyLevels/Easy3/Suitcase_1", "EasyLevels/Easy3/Suitcase_2",
+	"EasyLevels/Easy3/Suitcase_3", "EasyLevels/Easy3/Suitcase_4", "EasyLevels/Easy3/Suitcase_5",
+	"EasyLevels/Easy3/Suitcase_6", "EasyLevels/Easy3/Suitcase_7", "EasyLevels/Easy3/Suitcase_8"
 ],
 	"pieceColliderSize": {"x": 13.33, "y": 13.33},
 	"targetSquareColliderSize": {"x": 1, "y": 1},
