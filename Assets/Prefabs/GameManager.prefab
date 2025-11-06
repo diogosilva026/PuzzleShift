@@ -82,7 +82,7 @@ MonoBehaviour:
     - Key: Hard3
       Value:
         timeFor2Stars: 360
-        timeFor3Stars: 120
+        timeFor3Stars: 180
   bestLevelStars:
     _serializedList: []
   bestLevelCompletionTimes:
