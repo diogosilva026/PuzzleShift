@@ -38,6 +38,9 @@ namespace AYellowpaper.SerializedCollections
 
         [Header("Game Save Stuff")]
         private string savePath;
+
+        [Header("Settings Stuff")]
+        public bool IsFullscreen = true;
         #endregion
 
         private void Start()
@@ -50,7 +53,7 @@ namespace AYellowpaper.SerializedCollections
         // Saves the player's progress into a json file on disk
         public void SaveGame()
         {
-            SaveData data = new SaveData
+            SaveData data = new()
             {
                 totalPlayerStars = totalPlayerStars,
                 bestLevelStars = new SerializedDictionary<string, int>(bestLevelStars),
@@ -58,7 +61,8 @@ namespace AYellowpaper.SerializedCollections
                 musicVolume = AudioManager.Instance.GetMusicVolume(),
                 sfxVolume = AudioManager.Instance.GetSFXVolume(),
                 isMusicMuted = AudioManager.Instance.IsMusicMuted,
-                isSFXMuted = AudioManager.Instance.IsSFXMuted
+                isSFXMuted = AudioManager.Instance.IsSFXMuted,
+                isFullscreen = IsFullscreen
             };
 
             // Converts the SaveData object into a json string
@@ -88,12 +92,14 @@ namespace AYellowpaper.SerializedCollections
                 AudioManager.Instance.SetSFXVolume(data.sfxVolume);
                 AudioManager.Instance.MuteMusic(data.isMusicMuted);
                 AudioManager.Instance.MuteSFX(data.isSFXMuted);
+
+                IsFullscreen = data.isFullscreen;
             }
         }
 
         public void DeleteProgress()
         {
-            // Reset all player progress (excluding the audio)
+            // Reset all player progress (excluding the audio and settings)
             totalPlayerStars = 0;
             bestLevelStars.Clear();
             bestLevelCompletionTimes.Clear();
@@ -104,7 +110,10 @@ namespace AYellowpaper.SerializedCollections
             bool musicMuted = AudioManager.Instance.IsMusicMuted;
             bool sfxMuted = AudioManager.Instance.IsSFXMuted;
 
-            SaveData data = new SaveData
+            // Keep settings variables as they are
+            bool fullscreen = IsFullscreen;
+
+            SaveData data = new()
             {
                 totalPlayerStars = totalPlayerStars,
                 bestLevelStars = new SerializedDictionary<string, int>(bestLevelStars),
@@ -112,7 +121,8 @@ namespace AYellowpaper.SerializedCollections
                 musicVolume = musicVol,
                 sfxVolume = sfxVol,
                 isMusicMuted = musicMuted,
-                isSFXMuted = sfxMuted
+                isSFXMuted = sfxMuted,
+                isFullscreen = fullscreen
             };
 
             string json = JsonUtility.ToJson(data, true);

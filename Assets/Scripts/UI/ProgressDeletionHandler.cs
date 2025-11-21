@@ -2,7 +2,7 @@ using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionsMenuUIHandler : MonoBehaviour
+public class ProgressDeletionHandler : MonoBehaviour
 {
     [SerializeField] private Button deleteProgressButton;
 

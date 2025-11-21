@@ -1,41 +1,5 @@
 {
     "pieceCount": 16,
-    "targetPositions": [
-        {"x": -2.7, "y": 2.7, "z": 0.0},
-        {"x": -0.9, "y": 2.7, "z": 0.0},
-        {"x": 0.9, "y": 2.7, "z": 0.0},
-        {"x": 2.7, "y": 2.7, "z": 0.0},
-        {"x": -2.7, "y": 0.9, "z": 0.0},
-        {"x": -0.9, "y": 0.9, "z": 0.0},
-        {"x": 0.9, "y": 0.9, "z": 0.0},
-        {"x": 2.7, "y": 0.9, "z": 0.0},
-        {"x": -2.7, "y": -0.9, "z": 0.0},
-        {"x": -0.9, "y": -0.9, "z": 0.0},
-        {"x": 0.9, "y": -0.9, "z": 0.0},
-        {"x": 2.7, "y": -0.9, "z": 0.0},
-        {"x": -2.7, "y": -2.7, "z": 0.0},
-        {"x": -0.9, "y": -2.7, "z": 0.0},
-        {"x": 0.9, "y": -2.7, "z": 0.0},
-        {"x": 2.7, "y": -2.7, "z": 0.0}
-],
-    "pieceSpawnPoints": [
-        {"x": -7.5, "y": 3.5, "z": 0.0},
-        {"x": 7.5, "y": -1.2, "z": 0.0},
-        {"x": -5.0, "y": -1.2, "z": 0.0},
-        {"x": 5.0, "y": 3.5, "z": 0.0},
-        {"x": -7.5, "y": 1.2, "z": 0.0},
-        {"x": -7.5, "y": -3.5, "z": 0.0},
-        {"x": 7.5, "y": 1.2, "z": 0.0},
-        {"x": -5.0, "y": 1.2, "z": 0.0},
-        {"x": 7.5, "y": 3.5, "z": 0.0},
-        {"x": -7.5, "y": -1.2, "z": 0.0},
-        {"x": 5, "y": -1.2, "z": 0.0},
-        {"x": 7.5, "y": -3.5, "z": 0.0},
-        {"x": 5, "y": 1.2, "z": 0.0},
-        {"x": -5, "y": 3.5, "z": 0.0},
-        {"x": -5, "y": -3.5, "z": 0.0},
-        {"x": 5, "y": -3.5, "z": 0.0}
-    ],
     "pieceSprites": [
 	"MediumLevels/Medium2/Bear_0", "MediumLevels/Medium2/Bear_1", "MediumLevels/Medium2/Bear_2",
 	"MediumLevels/Medium2/Bear_3", "MediumLevels/Medium2/Bear_4", "MediumLevels/Medium2/Bear_5",
@@ -43,10 +7,5 @@
 	"MediumLevels/Medium2/Bear_9", "MediumLevels/Medium2/Bear_10", "MediumLevels/Medium2/Bear_11",
 	"MediumLevels/Medium2/Bear_12", "MediumLevels/Medium2/Bear_13", "MediumLevels/Medium2/Bear_14",
 	"MediumLevels/Medium2/Bear_15"
-],
-	"pieceColliderSize": {"x": 3.75, "y": 3.75},
-	"targetSquareColliderSize": {"x": 1, "y": 1},
-    "targetScale": {"x": 1.4, "y": 1.4, "z": 1.4},
-    "pieceScale": {"x": 0.464, "y": 0.464, "z": 0.464},
-    "pieceCorrectOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+]
 }

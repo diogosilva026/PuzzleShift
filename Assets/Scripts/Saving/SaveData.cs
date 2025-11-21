@@ -11,4 +11,6 @@ public class SaveData
     public float sfxVolume = 1f;
     public bool isMusicMuted = false;
     public bool isSFXMuted = false;
+
+    public bool isFullscreen = false;
 }

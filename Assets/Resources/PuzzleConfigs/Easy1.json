@@ -1,35 +1,8 @@
 {
     "pieceCount": 9,
-    "targetPositions": [
-        {"x": -3.0, "y": 2.0, "z": 0.0},
-        {"x": -1.0, "y": 2.0, "z": 0.0},
-        {"x": 1.0, "y": 2.0, "z": 0.0},
-        {"x": -3.0, "y": 0.0, "z": 0.0},
-        {"x": -1.0, "y": 0.0, "z": 0.0},
-        {"x": 1.0, "y": 0.0, "z": 0.0},
-        {"x": -3.0, "y": -2.0, "z": 0.0},
-        {"x": -1.0, "y": -2.0, "z": 0.0},
-        {"x": 1.0, "y": -2.0, "z": 0.0}
-],
-    "pieceSpawnPoints": [
-        {"x": 7.0, "y": 3.0, "z": 0.0},
-        {"x": -6.0, "y": 0.0, "z": 0.0},
-        {"x": 7.0, "y": 0.0, "z": 0.0},
-        {"x": 4.0, "y": -3.0, "z": 0.0},
-        {"x": 4.0, "y": 3.0, "z": 0.0},
-        {"x": -6.0, "y": -3.0, "z": 0.0},
-        {"x": -6.0, "y": 3.0, "z": 0.0},
-        {"x": 7.0, "y": -3.0, "z": 0.0},
-        {"x": 4.0, "y": 0.0, "z": 0.0}
-    ],
     "pieceSprites": [
 	"EasyLevels/Easy1/Squirrel_0", "EasyLevels/Easy1/Squirrel_1", "EasyLevels/Easy1/Squirrel_2",
 	"EasyLevels/Easy1/Squirrel_3", "EasyLevels/Easy1/Squirrel_4", "EasyLevels/Easy1/Squirrel_5",
 	"EasyLevels/Easy1/Squirrel_6", "EasyLevels/Easy1/Squirrel_7", "EasyLevels/Easy1/Squirrel_8"
-],
-	"pieceColliderSize": {"x": 8.61, "y": 8.61},
-	"targetSquareColliderSize": {"x": 1, "y": 1},
-    "targetScale": {"x": 1.5, "y": 1.5, "z": 1.5},
-    "pieceScale": {"x": 0.225, "y": 0.225, "z": 0.225},
-    "pieceCorrectOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+]
 }
