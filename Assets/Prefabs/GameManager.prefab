@@ -59,6 +59,18 @@ MonoBehaviour:
       Value:
         timeFor2Stars: 90
         timeFor3Stars: 30
+    - Key: Easy4
+      Value:
+        timeFor2Stars: 90
+        timeFor3Stars: 30
+    - Key: Easy5
+      Value:
+        timeFor2Stars: 90
+        timeFor3Stars: 30
+    - Key: Easy6
+      Value:
+        timeFor2Stars: 90
+        timeFor3Stars: 30
     - Key: Medium1
       Value:
         timeFor2Stars: 240
@@ -68,6 +80,18 @@ MonoBehaviour:
         timeFor2Stars: 240
         timeFor3Stars: 90
     - Key: Medium3
+      Value:
+        timeFor2Stars: 240
+        timeFor3Stars: 90
+    - Key: Medium4
+      Value:
+        timeFor2Stars: 240
+        timeFor3Stars: 90
+    - Key: Medium5
+      Value:
+        timeFor2Stars: 240
+        timeFor3Stars: 90
+    - Key: Medium6
       Value:
         timeFor2Stars: 240
         timeFor3Stars: 90
@@ -82,8 +106,21 @@ MonoBehaviour:
     - Key: Hard3
       Value:
         timeFor2Stars: 360
+        timeFor3Stars: 120
+    - Key: Hard4
+      Value:
+        timeFor2Stars: 360
+        timeFor3Stars: 120
+    - Key: Hard5
+      Value:
+        timeFor2Stars: 360
+        timeFor3Stars: 120
+    - Key: Hard6
+      Value:
+        timeFor2Stars: 360
         timeFor3Stars: 180
   bestLevelStars:
     _serializedList: []
   bestLevelCompletionTimes:
     _serializedList: []
+  IsFullscreen: 1

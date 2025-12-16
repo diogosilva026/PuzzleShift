@@ -1,0 +1,14 @@
+{
+    "pieceCount": 25,
+    "pieceSprites": [
+	"HardLevels/Hard5/Jellyfish_0", "HardLevels/Hard5/Jellyfish_1", "HardLevels/Hard5/Jellyfish_2",
+	"HardLevels/Hard5/Jellyfish_3", "HardLevels/Hard5/Jellyfish_4", "HardLevels/Hard5/Jellyfish_5",
+	"HardLevels/Hard5/Jellyfish_6", "HardLevels/Hard5/Jellyfish_7", "HardLevels/Hard5/Jellyfish_8",
+	"HardLevels/Hard5/Jellyfish_9", "HardLevels/Hard5/Jellyfish_10", "HardLevels/Hard5/Jellyfish_11",
+	"HardLevels/Hard5/Jellyfish_12", "HardLevels/Hard5/Jellyfish_13", "HardLevels/Hard5/Jellyfish_14",
+	"HardLevels/Hard5/Jellyfish_15", "HardLevels/Hard5/Jellyfish_16", "HardLevels/Hard5/Jellyfish_17",
+	"HardLevels/Hard5/Jellyfish_18", "HardLevels/Hard5/Jellyfish_19", "HardLevels/Hard5/Jellyfish_20",
+	"HardLevels/Hard5/Jellyfish_21", "HardLevels/Hard5/Jellyfish_22", "HardLevels/Hard5/Jellyfish_23",
+	"HardLevels/Hard5/Jellyfish_24"
+]
+}

@@ -1,11 +1,11 @@
 {
     "pieceCount": 16,
     "pieceSprites": [
-	"MediumLevels/Medium2/Bear_0", "MediumLevels/Medium2/Bear_1", "MediumLevels/Medium2/Bear_2",
-	"MediumLevels/Medium2/Bear_3", "MediumLevels/Medium2/Bear_4", "MediumLevels/Medium2/Bear_5",
-	"MediumLevels/Medium2/Bear_6", "MediumLevels/Medium2/Bear_7", "MediumLevels/Medium2/Bear_8",
-	"MediumLevels/Medium2/Bear_9", "MediumLevels/Medium2/Bear_10", "MediumLevels/Medium2/Bear_11",
-	"MediumLevels/Medium2/Bear_12", "MediumLevels/Medium2/Bear_13", "MediumLevels/Medium2/Bear_14",
-	"MediumLevels/Medium2/Bear_15"
+	"MediumLevels/Medium2/TeddyBear_0", "MediumLevels/Medium2/TeddyBear_1", "MediumLevels/Medium2/TeddyBear_2",
+	"MediumLevels/Medium2/TeddyBear_3", "MediumLevels/Medium2/TeddyBear_4", "MediumLevels/Medium2/TeddyBear_5",
+	"MediumLevels/Medium2/TeddyBear_6", "MediumLevels/Medium2/TeddyBear_7", "MediumLevels/Medium2/TeddyBear_8",
+	"MediumLevels/Medium2/TeddyBear_9", "MediumLevels/Medium2/TeddyBear_10", "MediumLevels/Medium2/TeddyBear_11",
+	"MediumLevels/Medium2/TeddyBear_12", "MediumLevels/Medium2/TeddyBear_13", "MediumLevels/Medium2/TeddyBear_14",
+	"MediumLevels/Medium2/TeddyBear_15"
 ]
 }

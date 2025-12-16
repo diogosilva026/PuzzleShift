@@ -1,0 +1,11 @@
+{
+    "pieceCount": 16,
+    "pieceSprites": [
+	"MediumLevels/Medium4/LionFish_0", "MediumLevels/Medium4/LionFish_1", "MediumLevels/Medium4/LionFish_2",
+	"MediumLevels/Medium4/LionFish_3", "MediumLevels/Medium4/LionFish_4", "MediumLevels/Medium4/LionFish_5",
+	"MediumLevels/Medium4/LionFish_6", "MediumLevels/Medium4/LionFish_7", "MediumLevels/Medium4/LionFish_8",
+	"MediumLevels/Medium4/LionFish_9", "MediumLevels/Medium4/LionFish_10", "MediumLevels/Medium4/LionFish_11",
+	"MediumLevels/Medium4/LionFish_12", "MediumLevels/Medium4/LionFish_13", "MediumLevels/Medium4/LionFish_14",
+	"MediumLevels/Medium4/LionFish_15"
+]
+}

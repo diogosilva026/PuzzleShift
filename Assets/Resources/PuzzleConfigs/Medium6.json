@@ -1,0 +1,11 @@
+{
+    "pieceCount": 16,
+    "pieceSprites": [
+	"MediumLevels/Medium6/Lighthouse_0", "MediumLevels/Medium6/Lighthouse_1", "MediumLevels/Medium6/Lighthouse_2",
+	"MediumLevels/Medium6/Lighthouse_3", "MediumLevels/Medium6/Lighthouse_4", "MediumLevels/Medium6/Lighthouse_5",
+	"MediumLevels/Medium6/Lighthouse_6", "MediumLevels/Medium6/Lighthouse_7", "MediumLevels/Medium6/Lighthouse_8",
+	"MediumLevels/Medium6/Lighthouse_9", "MediumLevels/Medium6/Lighthouse_10", "MediumLevels/Medium6/Lighthouse_11",
+	"MediumLevels/Medium6/Lighthouse_12", "MediumLevels/Medium6/Lighthouse_13", "MediumLevels/Medium6/Lighthouse_14",
+	"MediumLevels/Medium6/Lighthouse_15"
+]
+}

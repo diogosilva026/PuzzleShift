@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // This script is responsible for loading level data, spawning puzzle pieces and target squares, and checking for puzzle completion
@@ -95,12 +96,14 @@ public class PuzzleManager : MonoBehaviour
                 return;
         }
 
-        PuzzleComplete();
+        StartCoroutine(PuzzleComplete());
     }
 
     // Gets called whenever a puzzle is completed
-    private void PuzzleComplete()
+    IEnumerator PuzzleComplete()
     {
+        yield return new WaitForSeconds(0.2f);
+
         PauseManager pauseManager = FindObjectOfType<PauseManager>();
         Destroy(pauseManager);
 

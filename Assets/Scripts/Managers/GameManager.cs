@@ -23,7 +23,7 @@ namespace AYellowpaper.SerializedCollections
 
         #region VARIABLES
         [Header("Stars Stuff")]
-        private int totalGameStars = 27;
+        private int totalGameStars = 54;
         [SerializeField] private int totalPlayerStars = 0;
 
         [SerializedDictionary("Level Name", "Star Thresholds")]

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StarsUIHandler : MonoBehaviour
 {
     #region VARIABLES
-    [Header("Total Stars UI")]
+    [Header("Total Game Stars UI")]
     [SerializeField] private TextMeshProUGUI[] starsEarnedTMP;
 
     [Header("Level Stars UI")]
