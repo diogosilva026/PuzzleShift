@@ -17,10 +17,10 @@ public class PuzzleManager : MonoBehaviour
     private void Awake()
     {
         if (targetSpawner == null)
-            targetSpawner = FindObjectOfType<TargetSquareSpawner>();
+            targetSpawner = FindFirstObjectByType<TargetSquareSpawner>();
 
         if (pieceSpawner == null)
-            pieceSpawner = FindObjectOfType<PuzzlePieceSpawner>();
+            pieceSpawner = FindFirstObjectByType<PuzzlePieceSpawner>();
     }
 
     private void Start()
@@ -104,8 +104,8 @@ public class PuzzleManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
 
-        PauseManager pauseManager = FindObjectOfType<PauseManager>();
-        Destroy(pauseManager);
+        PauseManager pauseManager = FindFirstObjectByType<PauseManager>();
+        pauseManager.SetPauseInputEnabled(false);
 
         winScreen.SetActive(true);
         TimerManager.Instance.EndTimer();

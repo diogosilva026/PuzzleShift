@@ -11,7 +11,7 @@ public class TargetSquare : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         // Get PuzzleManager to access currently selected piece
-        PuzzleManager puzzleManager = FindObjectOfType<PuzzleManager>();
+        PuzzleManager puzzleManager = FindFirstObjectByType<PuzzleManager>();
         PuzzlePiece selected = puzzleManager.SelectedPiece;
 
         if (selected == null)

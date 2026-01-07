@@ -14,8 +14,6 @@ public class PuzzlePiece : MonoBehaviour, IPointerClickHandler
     public Image spriteImage;
 
     [HideInInspector] public RectTransform rectTransform;
-
-    private bool isSelected;
     #endregion
 
     private void Awake()
@@ -25,7 +23,7 @@ public class PuzzlePiece : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        PuzzleManager puzzleManager = FindObjectOfType<PuzzleManager>();
+        PuzzleManager puzzleManager = FindFirstObjectByType<PuzzleManager>();
 
         if (puzzleManager.SelectedPiece == this)
         {
@@ -48,8 +46,8 @@ public class PuzzlePiece : MonoBehaviour, IPointerClickHandler
     public void MoveToSpawn()
     {
         // Find the piece container and move the piece there
-        PuzzlePieceSpawner spawner = FindObjectOfType<PuzzlePieceSpawner>();
-        TargetSquare targetSquare = FindObjectOfType<TargetSquare>();
+        PuzzlePieceSpawner spawner = FindFirstObjectByType<PuzzlePieceSpawner>();
+        TargetSquare targetSquare = FindFirstObjectByType<TargetSquare>();
         if (spawner != null)
         {
             RectTransform pieceContainer = spawner.GetComponent<RectTransform>();
@@ -63,7 +61,6 @@ public class PuzzlePiece : MonoBehaviour, IPointerClickHandler
     // Set selected piece
     public void SetSelected(bool selected)
     {
-        isSelected = selected;
         outline.enabled = selected;
     }
 

@@ -74,7 +74,7 @@ public class TimerManager : MonoBehaviour
         int starsEarned = GameManager.Instance.CalculateLevelTimeStars(currentLevel, timer);
         GameManager.Instance.UpdateStarsForLevel(currentLevel, starsEarned);
 
-        StarsUIHandler starsUIHandler = FindObjectOfType<StarsUIHandler>();
+        StarsUIHandler starsUIHandler = FindFirstObjectByType<StarsUIHandler>();
         starsUIHandler.DisplayLevelEndingStars(starsEarned);
     }
 }

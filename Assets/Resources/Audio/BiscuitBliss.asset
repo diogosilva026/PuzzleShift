@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a923468dbc199bb45a896804a65a58b1, type: 3}
-  m_Name: Jazz1
+  m_Name: BiscuitBliss
   m_EditorClassIdentifier: 
-  soundName: Jazz1
+  soundName: Biscuit Bliss by Krzysztof Szymanski
   clip: {fileID: 8300000, guid: 1cb21e02acf1e5f45a0b1054899adcb3, type: 3}
   mixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   volume: 1
