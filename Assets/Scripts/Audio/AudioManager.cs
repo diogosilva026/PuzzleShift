@@ -31,6 +31,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<SoundData> musicTracks;
     [SerializeField] private int currentSongIndex = -1;
 
+    private bool wasMusicPlaying = false;
+    public bool IsMusicLoopEnabled { get; private set; }
     public bool IsMasterMuted { get; private set; }
     public bool IsMusicMuted { get; private set; }
     public bool IsSFXMuted { get; private set; }
@@ -43,16 +45,25 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        // Temporary while there is no save system
-        if (musicTracks.Count == 0) return;
-
         if (currentSongIndex < 0 || currentSongIndex >= musicTracks.Count)
         {
             currentSongIndex = Random.Range(0, musicTracks.Count);
         }
 
-        // Not temporary
-        PlayMusic(musicTracks[currentSongIndex]);
+        PlaySong(musicTracks[currentSongIndex]);
+    }
+
+    private void Update()
+    {
+        if (IsMusicLoopEnabled) return;
+
+        // Detect song end
+        if (wasMusicPlaying && !musicSource.isPlaying)
+        {
+            PlayNextSong();
+        }
+
+        wasMusicPlaying = musicSource.isPlaying;
     }
 
     #region VOLUME
@@ -111,7 +122,7 @@ public class AudioManager : MonoBehaviour
     // Plays the desired sfx once
     public void PlaySFX(string soundName)
     {
-        SoundData sound = LoadSound(soundName);
+        SoundData sound = LoadSFX(soundName);
         if (sound == null || sound.clip == null) return;
 
         // Creates a temporary gameobject holding the audiosource needed
@@ -129,7 +140,7 @@ public class AudioManager : MonoBehaviour
     // Plays the desired sfx once but with a random pitch
     public void PlaySFXWithRandomPitch(string soundName)
     {
-        SoundData sound = LoadSound(soundName);
+        SoundData sound = LoadSFX(soundName);
         if (sound == null || sound.clip == null) return;
 
         GameObject tempGO = new($"SFX_{soundName}");
@@ -141,34 +152,55 @@ public class AudioManager : MonoBehaviour
 
         Destroy(tempGO, sound.clip.length + 0.1f);
     }
+
+    // Loads SoundData for SFX only, caching it so it only loads once from the resources
+    private SoundData LoadSFX(string soundName)
+    {
+        if (soundCache.TryGetValue(soundName, out var cached)) return cached;
+
+        SoundData loaded = Resources.Load<SoundData>($"Audio/SFX/{soundName}");
+        if (loaded != null)
+            soundCache[soundName] = loaded;
+
+        return loaded;
+    }
     #endregion
 
     #region MUSIC
-    public void PlayMusic(SoundData music, bool loop = true)
+    public void PlaySong(SoundData music)
     {
         if (music == null || music.clip == null) return;
 
         musicSource.clip = music.clip;
         musicSource.volume = music.volume;
         musicSource.pitch = music.pitch;
-        musicSource.loop = loop;
+        musicSource.loop = IsMusicLoopEnabled;
         musicSource.outputAudioMixerGroup = music.mixerGroup != null ? music.mixerGroup : musicGroup;
 
         musicSource.Play();
+        wasMusicPlaying = true;
     }
-    #endregion
 
-    #region LOADING
-    // Loads a SoundData asset, caching it so it only loads once from the resources
-    private SoundData LoadSound(string soundName)
+    private void PlayNextSong()
     {
-        if (soundCache.TryGetValue(soundName, out var cached)) return cached;
+        currentSongIndex++;
 
-        SoundData loaded = Resources.Load<SoundData>($"Audio/{soundName}");
-        if (loaded != null)
-            soundCache[soundName] = loaded;
+        // Wrap around playlist
+        if (currentSongIndex >= musicTracks.Count)
+            currentSongIndex = 0;
 
-        return loaded;
+        PlaySong(musicTracks[currentSongIndex]);
+    }
+
+    // Enable or disable music loop
+    public void SetMusicLoop(bool enabled)
+    {
+        IsMusicLoopEnabled = enabled;
+
+        if (musicSource != null)
+        {
+            musicSource.loop = enabled;
+        }
     }
     #endregion
 }

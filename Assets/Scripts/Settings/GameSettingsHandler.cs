@@ -4,26 +4,18 @@ using UnityEngine.UI;
 
 public class GameSettingsHandler : MonoBehaviour
 {
-    #region SINGLETON
-    public static GameSettingsHandler Instance { get; private set; }
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
-    #endregion
-
     [Header("Fullscreen Stuff")]
     [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private Button deleteProgressButton;
+
+    private void Start()
+    {
+        deleteProgressButton.onClick.AddListener(GameManager.Instance.DeleteProgress);
+    }
 
     public void SetFullscreen(bool isFullscreen)
     {
-        // Store the value
+        // Store value on the GameManager
         GameManager.Instance.IsFullscreen = isFullscreen;
 
         if (isFullscreen)

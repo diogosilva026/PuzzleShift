@@ -51,6 +51,20 @@ MonoBehaviour:
   musicSource: {fileID: 1008456751636472797}
   musicTracks:
   - {fileID: 11400000, guid: f7253172da45a0945830036cfb556cbd, type: 2}
+  - {fileID: 11400000, guid: b9e3c788bd88d8b4e97219cf90d0f039, type: 2}
+  - {fileID: 11400000, guid: 9d567cb801f80ba49aa7e9738e49fcf9, type: 2}
+  - {fileID: 11400000, guid: f0734a451f41f8148b3a45b23acb4582, type: 2}
+  - {fileID: 11400000, guid: 4ac033c78efd8eb49bd85ede71e742cf, type: 2}
+  - {fileID: 11400000, guid: 9dc9d8ffd9e022b41a006165830f2986, type: 2}
+  - {fileID: 11400000, guid: ab0c02476647cb14aa238862a888257b, type: 2}
+  - {fileID: 11400000, guid: 44c00af7e20e4c04883c35f1355d1e81, type: 2}
+  - {fileID: 11400000, guid: f31b04bbeac3dc941b81a4bfbff874ec, type: 2}
+  - {fileID: 11400000, guid: 81089c631af10c346bc3b1e1f9d3280e, type: 2}
+  - {fileID: 11400000, guid: 105480ee37c45c7429cdb4807ea2095e, type: 2}
+  - {fileID: 11400000, guid: 0fd0e1c318acd7445829aefae08050cb, type: 2}
+  - {fileID: 11400000, guid: ad76405341f503c449b0b65de8a23a30, type: 2}
+  - {fileID: 11400000, guid: 7be949f5de95b5b42ad734da851644fe, type: 2}
+  - {fileID: 11400000, guid: 7fe0bcd0ec1b08d47a2654a32a60de26, type: 2}
   currentSongIndex: -1
 --- !u!1 &5922050121124371717
 GameObject:
@@ -95,10 +109,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

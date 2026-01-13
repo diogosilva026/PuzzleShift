@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 0
@@ -255,20 +252,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -476,7 +476,7 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3952588252841035880, guid: c70593f5d98e16e439b83a2f8f2ae819, type: 3}
-      propertyPath: muteToggles.Array.data[0]
+      propertyPath: 'muteToggles.Array.data[0]'
       value: 
       objectReference: {fileID: 1314490650}
     - target: {fileID: 1926799264985061346, guid: c70593f5d98e16e439b83a2f8f2ae819, type: 3}
@@ -629,20 +629,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1064,20 +1067,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1198,20 +1204,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1794,20 +1803,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3449,20 +3461,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3722,20 +3737,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3856,20 +3874,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3990,20 +4011,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4124,20 +4148,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4402,20 +4429,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4724,20 +4754,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5003,20 +5036,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5371,20 +5407,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5949,20 +5988,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6083,20 +6125,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6293,20 +6338,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6427,20 +6475,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6817,135 +6868,135 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[3]
+      propertyPath: 'levelNames.Array.data[3]'
       value: Easy4
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[4]
+      propertyPath: 'levelNames.Array.data[4]'
       value: Easy5
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[5]
+      propertyPath: 'levelNames.Array.data[5]'
       value: Easy6
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[6]
+      propertyPath: 'levelNames.Array.data[6]'
       value: Medium1
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[7]
+      propertyPath: 'levelNames.Array.data[7]'
       value: Medium2
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[8]
+      propertyPath: 'levelNames.Array.data[8]'
       value: Medium3
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[9]
+      propertyPath: 'levelNames.Array.data[9]'
       value: Medium4
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[10]
+      propertyPath: 'levelNames.Array.data[10]'
       value: Medium5
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[11]
+      propertyPath: 'levelNames.Array.data[11]'
       value: Medium6
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[12]
+      propertyPath: 'levelNames.Array.data[12]'
       value: Hard1
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[13]
+      propertyPath: 'levelNames.Array.data[13]'
       value: Hard2
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[14]
+      propertyPath: 'levelNames.Array.data[14]'
       value: Hard3
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[15]
+      propertyPath: 'levelNames.Array.data[15]'
       value: Hard4
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[16]
+      propertyPath: 'levelNames.Array.data[16]'
       value: Hard5
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: levelNames.Array.data[17]
+      propertyPath: 'levelNames.Array.data[17]'
       value: Hard6
       objectReference: {fileID: 0}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[0]
+      propertyPath: 'bestTimesTMP.Array.data[0]'
       value: 
       objectReference: {fileID: 87675893}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[1]
+      propertyPath: 'bestTimesTMP.Array.data[1]'
       value: 
       objectReference: {fileID: 500711230}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[2]
+      propertyPath: 'bestTimesTMP.Array.data[2]'
       value: 
       objectReference: {fileID: 353186721}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[3]
+      propertyPath: 'bestTimesTMP.Array.data[3]'
       value: 
       objectReference: {fileID: 1520350456}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[4]
+      propertyPath: 'bestTimesTMP.Array.data[4]'
       value: 
       objectReference: {fileID: 506518252}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[5]
+      propertyPath: 'bestTimesTMP.Array.data[5]'
       value: 
       objectReference: {fileID: 834580079}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[6]
+      propertyPath: 'bestTimesTMP.Array.data[6]'
       value: 
       objectReference: {fileID: 178789908}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[7]
+      propertyPath: 'bestTimesTMP.Array.data[7]'
       value: 
       objectReference: {fileID: 884459198}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[8]
+      propertyPath: 'bestTimesTMP.Array.data[8]'
       value: 
       objectReference: {fileID: 1792855887}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[9]
+      propertyPath: 'bestTimesTMP.Array.data[9]'
       value: 
       objectReference: {fileID: 2075005478}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[10]
+      propertyPath: 'bestTimesTMP.Array.data[10]'
       value: 
       objectReference: {fileID: 1924684230}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[11]
+      propertyPath: 'bestTimesTMP.Array.data[11]'
       value: 
       objectReference: {fileID: 1471637670}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[12]
+      propertyPath: 'bestTimesTMP.Array.data[12]'
       value: 
       objectReference: {fileID: 1459122920}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[13]
+      propertyPath: 'bestTimesTMP.Array.data[13]'
       value: 
       objectReference: {fileID: 1482456104}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[14]
+      propertyPath: 'bestTimesTMP.Array.data[14]'
       value: 
       objectReference: {fileID: 74728198}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[15]
+      propertyPath: 'bestTimesTMP.Array.data[15]'
       value: 
       objectReference: {fileID: 1964410382}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[16]
+      propertyPath: 'bestTimesTMP.Array.data[16]'
       value: 
       objectReference: {fileID: 389591715}
     - target: {fileID: 3842065403179145235, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
-      propertyPath: bestTimesTMP.Array.data[17]
+      propertyPath: 'bestTimesTMP.Array.data[17]'
       value: 
       objectReference: {fileID: 1373373357}
     - target: {fileID: 4903714470459594782, guid: a400a872a4d5cdb42b93d3f33dcc6252, type: 3}
@@ -7604,20 +7655,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -7738,20 +7792,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -7884,7 +7941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798211133}
   - component: {fileID: 798211132}
-  - component: {fileID: 798211131}
+  - component: {fileID: 798211134}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7892,26 +7949,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &798211131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798211130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &798211132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7942,6 +7979,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &798211134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798211130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &817166556
 GameObject:
   m_ObjectHideFlags: 0
@@ -7976,7 +8044,6 @@ RectTransform:
   - {fileID: 37283691}
   - {fileID: 516644456}
   - {fileID: 2134276376}
-  - {fileID: 1110647321}
   m_Father: {fileID: 1637799577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8079,20 +8146,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -8352,20 +8422,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -8711,20 +8784,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -9214,20 +9290,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -9424,20 +9503,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -9558,20 +9640,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -10037,20 +10122,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -10171,20 +10259,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -10210,72 +10301,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109789468}
   m_CullTransparentMesh: 1
---- !u!1001 &1110647320
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817166557}
-    m_Modifications:
-    - target: {fileID: 2939222425502629419, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_Name
-      value: ProgressDeletionHandler
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221780308997908218, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-      propertyPath: deleteProgressButton
-      value: 
-      objectReference: {fileID: 516644457}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
---- !u!4 &1110647321 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3586321825501773918, guid: 75c86c3becd872e4c94de8196821e76d, type: 3}
-  m_PrefabInstance: {fileID: 1110647320}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134877378
 GameObject:
   m_ObjectHideFlags: 0
@@ -10371,20 +10396,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -11240,20 +11268,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -11593,20 +11624,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -12857,20 +12891,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -13179,20 +13216,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -13976,6 +14016,10 @@ PrefabInstance:
       propertyPath: fullscreenToggle
       value: 
       objectReference: {fileID: 791555229}
+    - target: {fileID: 1485873210827748970, guid: 02b86774bc4488b4f9270d29140ff949, type: 3}
+      propertyPath: deleteProgressButton
+      value: 
+      objectReference: {fileID: 516644457}
     - target: {fileID: 3667275714860153837, guid: 02b86774bc4488b4f9270d29140ff949, type: 3}
       propertyPath: m_LocalPosition.x
       value: 960
@@ -14247,20 +14291,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14419,20 +14466,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14553,20 +14603,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14687,20 +14740,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14934,20 +14990,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -15068,20 +15127,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -15202,20 +15264,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -15518,20 +15583,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -16928,20 +16996,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -17449,20 +17520,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -18260,20 +18334,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -18578,20 +18655,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -18802,20 +18882,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -19484,20 +19567,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -19618,20 +19704,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -19786,15 +19875,15 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: starsEarnedTMP.Array.data[0]
+      propertyPath: 'starsEarnedTMP.Array.data[0]'
       value: 
       objectReference: {fileID: 1965565343}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: starsEarnedTMP.Array.data[1]
+      propertyPath: 'starsEarnedTMP.Array.data[1]'
       value: 
       objectReference: {fileID: 1557501941}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: starsEarnedTMP.Array.data[2]
+      propertyPath: 'starsEarnedTMP.Array.data[2]'
       value: 
       objectReference: {fileID: 1522493343}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
@@ -19894,219 +19983,219 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[0].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[0].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 640268366}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[0].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[0].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1605647972}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[0].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[0].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1047131376}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[1].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[1].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 229022070}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[1].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[1].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1399984308}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[1].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[1].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1303276184}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[2].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[2].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 203247794}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[2].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[2].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1365487934}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[2].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[2].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 653062138}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[3].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[3].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 120981360}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[3].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[3].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1715352880}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[3].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[3].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 953877196}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[4].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[4].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 2068791550}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[4].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[4].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 286662842}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[4].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[4].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 889567552}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[5].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[5].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 668991917}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[5].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[5].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1286435057}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[5].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[5].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 229513640}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[6].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[6].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 56410651}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[6].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[6].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1991910311}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[6].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[6].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 205282970}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[7].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[7].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 1270338697}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[7].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[7].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 888787132}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[7].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[7].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 530719806}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[8].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[8].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 317569939}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[8].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[8].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1376727031}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[8].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[8].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1181214001}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[9].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[9].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 2140991451}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[9].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[9].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1950179174}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[9].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[9].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1414999565}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[10].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[10].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 1735986815}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[10].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[10].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 97398318}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[10].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[10].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 871927300}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[11].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[11].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 295254024}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[11].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[11].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1286184042}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[11].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[11].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1093845566}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[12].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[12].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 1292972175}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[12].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[12].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 343175497}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[12].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[12].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1512999615}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[13].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[13].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 1350641597}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[13].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[13].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 1609706701}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[13].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[13].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1153376330}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[14].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[14].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 1956605044}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[14].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[14].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 944005704}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[14].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[14].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1765676736}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[15].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[15].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 73247900}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[15].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[15].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 211293087}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[15].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[15].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 2134094114}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[16].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[16].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 236811110}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[16].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[16].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 165954747}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[16].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[16].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 1451218263}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[17].starImages.Array.data[0]
+      propertyPath: 'allLevels.Array.data[17].starImages.Array.data[0]'
       value: 
       objectReference: {fileID: 355275394}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[17].starImages.Array.data[1]
+      propertyPath: 'allLevels.Array.data[17].starImages.Array.data[1]'
       value: 
       objectReference: {fileID: 481691546}
     - target: {fileID: -4648039585089832274, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
-      propertyPath: allLevels.Array.data[17].starImages.Array.data[2]
+      propertyPath: 'allLevels.Array.data[17].starImages.Array.data[2]'
       value: 
       objectReference: {fileID: 892595135}
     - target: {fileID: 5892097121398706006, guid: 5d86f0b4e0910dc49a8e2fbc7d392831, type: 3}
@@ -20522,20 +20611,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
