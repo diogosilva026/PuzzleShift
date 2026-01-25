@@ -112,9 +112,7 @@ public class AudioSettingsUI : MonoBehaviour
         AudioManager.Instance.MuteMusic(isMuted);
 
         if (!isMuted)
-        {
             musicSlider.SetValueWithoutNotify(AudioManager.Instance.LastMusicVolume);
-        }
 
         UpdateMusicSprite(isMuted);
         SaveSettings();
@@ -126,9 +124,7 @@ public class AudioSettingsUI : MonoBehaviour
         AudioManager.Instance.MuteSFX(isMuted);
 
         if (!isMuted)
-        {
             sfxSlider.SetValueWithoutNotify(AudioManager.Instance.LastSFXVolume);
-        }
 
         UpdateSFXSprite(isMuted);
         SaveSettings();

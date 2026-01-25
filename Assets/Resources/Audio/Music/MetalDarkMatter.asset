@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a923468dbc199bb45a896804a65a58b1, type: 3}
   m_Name: MetalDarkMatter
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  soundName: Metal (Dark Matter) by AlexGrohl
+  songName: Metal (Dark Matter)
+  artistName: AlexGrohl
   clip: {fileID: 8300000, guid: eac1b245f44df2244920bc56197ecc7c, type: 3}
   mixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   volume: 1
   pitch: 1
-  loop: 0

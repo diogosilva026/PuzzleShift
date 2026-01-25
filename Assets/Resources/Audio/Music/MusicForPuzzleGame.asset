@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a923468dbc199bb45a896804a65a58b1, type: 3}
   m_Name: MusicForPuzzleGame
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  soundName: Music for Puzzle Game by Ivan Traveso
+  songName: Music for Puzzle Game
+  artistName: Ivan Traveso
   clip: {fileID: 8300000, guid: 9bd7e4e76c609f5448277467bbd5849f, type: 3}
   mixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   volume: 1
   pitch: 1
-  loop: 0

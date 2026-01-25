@@ -4,7 +4,8 @@ using UnityEngine.Audio;
 [CreateAssetMenu(menuName = "Audio/SoundData")]
 public class SoundData : ScriptableObject
 {
-    public string soundName;
+    public string songName;
+    public string artistName;
     public AudioClip clip;
     public AudioMixerGroup mixerGroup;
     public float volume = 1f;

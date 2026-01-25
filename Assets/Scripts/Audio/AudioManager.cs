@@ -31,7 +31,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<SoundData> musicTracks;
     [SerializeField] private int currentSongIndex = -1;
 
+    public event System.Action<SoundData> OnSongChanged;
+    public SoundData CurrentSong { get; private set; }
+
     private bool wasMusicPlaying = false;
+    public bool IsMusicPaused => !musicSource.isPlaying && musicSource.clip != null;
     public bool IsMusicLoopEnabled { get; private set; }
     public bool IsMasterMuted { get; private set; }
     public bool IsMusicMuted { get; private set; }
@@ -171,6 +175,8 @@ public class AudioManager : MonoBehaviour
     {
         if (music == null || music.clip == null) return;
 
+        CurrentSong = music;
+
         musicSource.clip = music.clip;
         musicSource.volume = music.volume;
         musicSource.pitch = music.pitch;
@@ -179,15 +185,45 @@ public class AudioManager : MonoBehaviour
 
         musicSource.Play();
         wasMusicPlaying = true;
+
+        OnSongChanged?.Invoke(CurrentSong);
     }
 
-    private void PlayNextSong()
+    public void PauseSong()
+    {
+        if (musicSource.isPlaying)
+        {
+            musicSource.Pause();
+            wasMusicPlaying = false;
+        }
+    }
+
+    public void ResumeSong()
+    {
+        if (!musicSource.isPlaying && musicSource.clip != null)
+        {
+            musicSource.UnPause();
+            wasMusicPlaying = true;
+        }
+    }
+
+    public void PlayNextSong()
     {
         currentSongIndex++;
 
         // Wrap around playlist
         if (currentSongIndex >= musicTracks.Count)
             currentSongIndex = 0;
+
+        PlaySong(musicTracks[currentSongIndex]);
+    }
+
+    public void PlayPreviousSong()
+    {
+        currentSongIndex--;
+
+        if (currentSongIndex < 0)
+            currentSongIndex = musicTracks.Count - 1;
 
         PlaySong(musicTracks[currentSongIndex]);
     }

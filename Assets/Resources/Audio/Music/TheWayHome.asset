@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a923468dbc199bb45a896804a65a58b1, type: 3}
   m_Name: TheWayHome
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  soundName: THE WAY HOME by Zakhar Valaha
+  songName: THE WAY HOME
+  artistName: Zakhar Valaha
   clip: {fileID: 8300000, guid: f0a8bfbaafc0dfb4f8a7868e7ae4bc72, type: 3}
   mixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   volume: 1
   pitch: 1
-  loop: 0

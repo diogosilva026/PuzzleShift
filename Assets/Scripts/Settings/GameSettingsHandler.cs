@@ -28,14 +28,10 @@ public class GameSettingsHandler : MonoBehaviour
             // Go windowed with default setting
             Screen.fullScreen = false;
         }
-        
-        // Update toggle UI
-        fullscreenToggle.isOn = isFullscreen;
     }
 
     public void UpdateSettingsUI()
     {
-        // Update toggle UI
         fullscreenToggle.isOn = GameManager.Instance.IsFullscreen;
     }
 

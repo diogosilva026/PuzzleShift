@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a923468dbc199bb45a896804a65a58b1, type: 3}
   m_Name: TheLandOfWonder
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  soundName: The Land of Wonder by Geoff Harvey
+  songName: The Land of Wonder
+  artistName: Geoff Harvey
   clip: {fileID: 8300000, guid: ac568e58cf4a12e488ed3de96dc3f4b0, type: 3}
   mixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   volume: 1
   pitch: 1
-  loop: 0

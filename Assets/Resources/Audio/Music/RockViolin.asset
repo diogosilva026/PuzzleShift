@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a923468dbc199bb45a896804a65a58b1, type: 3}
   m_Name: RockViolin
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  soundName: Rock Violin by Bugs Bunny
+  songName: Rock Violin
+  artistName: Bugs Bunny
   clip: {fileID: 8300000, guid: 1816256329349e144a0cb553552a9498, type: 3}
   mixerGroup: {fileID: 2225868748019012965, guid: 7f7442f9e0b4b604cba8ff6fd4930071, type: 2}
   volume: 1
   pitch: 1
-  loop: 0
